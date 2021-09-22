@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/space-voyager/static/css/main.3676215e.chunk.css",
+    "main.js": "/space-voyager/static/js/main.b6cb86e7.chunk.js",
+    "main.js.map": "/space-voyager/static/js/main.b6cb86e7.chunk.js.map",
+    "runtime-main.js": "/space-voyager/static/js/runtime-main.78f31c69.js",
+    "runtime-main.js.map": "/space-voyager/static/js/runtime-main.78f31c69.js.map",
+    "static/js/2.dd633d69.chunk.js": "/space-voyager/static/js/2.dd633d69.chunk.js",
+    "static/js/2.dd633d69.chunk.js.map": "/space-voyager/static/js/2.dd633d69.chunk.js.map",
+    "index.html": "/space-voyager/index.html",
+    "static/css/main.3676215e.chunk.css.map": "/space-voyager/static/css/main.3676215e.chunk.css.map",
+    "static/js/2.dd633d69.chunk.js.LICENSE.txt": "/space-voyager/static/js/2.dd633d69.chunk.js.LICENSE.txt",
+    "static/media/img1.99083fab.png": "/space-voyager/static/media/img1.99083fab.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.78f31c69.js",
+    "static/js/2.dd633d69.chunk.js",
+    "static/css/main.3676215e.chunk.css",
+    "static/js/main.b6cb86e7.chunk.js"
+  ]
+}
