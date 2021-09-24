@@ -44,6 +44,7 @@ body{
 
 
 }
+
 @keyframes rotation{
   from{
     transform:rotate(0deg);
@@ -56,7 +57,7 @@ body{
 
 .particle{
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   width: 100%;
 }
 
@@ -102,6 +103,28 @@ body{
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 3rem;
   border-bottom: 2px solid whitesmoke;
+  
+}
+
+.planimg{
+  float: right;
+  
+
+}
+
+.planimg img{
+  width:400px;
+  height: 400px;
+  margin: 6rem;
+  animation: rotation infinite 15s linear;
+ 
+  
+}
+.deepbox{
+  position: relative;
+  margin: 3rem;
+  text-align: left;
+  
   
 }
 

@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 import './index.css';
 import img1 from './components/img1.png';
+import 'animate.css';
+
+
+
 
 import Particles from 'react-particles-js';
 
 const api = {
   base: "https://api.le-systeme-solaire.net/rest/bodies/",
-  base2: "https://pixabay.com/api/"
 };
 
 function App() {
 
   const [data, setData] = useState([]);
   const [query, setQuery] = useState('');
-  const [img, setImg] = useState([]);
 
   // const fetchApidata = async () => {
   //   const api = await fetch('https://api.le-systeme-solaire.net/rest/bodies/');
@@ -23,25 +25,14 @@ function App() {
   // ?key=23519497-32dcbbb5403142627fd458559&q=yellow+flowers&image_type=photo&pretty=true
   // }
 
-//   const pics = evt =>{
-//     if(evt.key === "Enter"){
-//       fetch(`${api.base2}?key=23519497-32dcbbb5403142627fd458559&q=${query}&image_type=photo`)
-//       .then(res2 =>res2.json())
-//       .then (result2 =>{
-//         console.log(result2);
-//         setImg(result2);
-//         setQuery('')
 
-
-
-//     });
-//   }
-// }
 
   const search = evt =>{
+
     if(evt.key === "Enter"){
   
       fetch(`${api.base}${query}`)
+      
 
       .then(res=>res.json())
       .then(result =>{
@@ -49,16 +40,15 @@ function App() {
         setQuery('');
         console.log(result);
       });
+      
+
+
 
      
 
     }
   }
 
-  // useEffect(()=>{
-  //   fetchApidata();
-  
-  // },[]);
   return (
     <>
       <div className="main_heading">
@@ -70,15 +60,13 @@ function App() {
         </div>
         <div className="text">
         <h1> Space Voyager </h1>
-        <h1> mohit </h1>
+ 
        
         <p> Explore the space at fingertips </p>
         </div>
         
       </div>
-      
- 
-      
+            
       <div className="searchkabox">
         <input type="text" className="searchbar" placeholder="Enter Planet name here"
         onChange={e => setQuery(e.target.value)}
@@ -137,10 +125,18 @@ function App() {
 	}} />
   
         {(typeof data.name != "undefined" ) ? (
+
+          <>
           <div className="detailbox">
           <h2> {data.englishName} </h2>
+          </div>
+          <div className="planimg">
+                  <img  src={require("../assets/"+data.englishName+".png").default} />
+            </div>
+          
 
           <div className="deepbox">
+          
           <h3> Mass of {data.englishName} : {data.mass.massValue} <span>&#215;</span> 10<sup>{data.mass.massExponent}</sup> kg </h3>
           <h3> Mean Temprature of {data.englishName} : {data.avgTemp} K </h3>
           <h3> Mean radius of {data.englishName} : {data.meanRadius} km </h3>
@@ -155,13 +151,15 @@ function App() {
           <h3> Aphelion of {data.englishName}: {data.aphelion} km </h3>
           <h3> Perihelion period of {data.englishName}: {data.perihelion} km </h3>
           <h3> Moons of {data.englishName}: {data.moons.map((elem, index) =>{
-            return (<p> {elem.moon} </p>)
+            return (<span> {elem.moon}, </span>) 
 
           })}
           </h3>
           
           </div>
-          </div>
+          </>
+    
+          
 
         ):('')}
         
