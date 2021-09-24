@@ -150,11 +150,11 @@ function App() {
           <h3> Density of {data.englishName}: {data.density} g/cm<sup>3</sup> </h3>
           <h3> Aphelion of {data.englishName}: {data.aphelion} km </h3>
           <h3> Perihelion period of {data.englishName}: {data.perihelion} km </h3>
-          <h3> Moons of {data.englishName}: {data.moons.map((elem, index) =>{
+          {/* <h3> Moons of {data.englishName}: {data.moons.map((elem, index) =>{
             return (<span> {elem.moon}, </span>) 
 
           })}
-          </h3>
+          </h3> */}
           
           </div>
           </>
