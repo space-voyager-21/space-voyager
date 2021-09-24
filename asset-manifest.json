@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/space-voyager/static/css/main.663ed2fc.chunk.css",
-    "main.js": "/space-voyager/static/js/main.f0fae26d.chunk.js",
-    "main.js.map": "/space-voyager/static/js/main.f0fae26d.chunk.js.map",
+    "main.js": "/space-voyager/static/js/main.fc7f0539.chunk.js",
+    "main.js.map": "/space-voyager/static/js/main.fc7f0539.chunk.js.map",
     "runtime-main.js": "/space-voyager/static/js/runtime-main.78f31c69.js",
     "runtime-main.js.map": "/space-voyager/static/js/runtime-main.78f31c69.js.map",
     "static/css/2.a1596f27.chunk.css": "/space-voyager/static/css/2.a1596f27.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.a1596f27.chunk.css",
     "static/js/2.ffc257d4.chunk.js",
     "static/css/main.663ed2fc.chunk.css",
-    "static/js/main.f0fae26d.chunk.js"
+    "static/js/main.fc7f0539.chunk.js"
   ]
 }
