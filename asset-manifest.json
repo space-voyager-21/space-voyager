@@ -1,21 +1,32 @@
 {
   "files": {
-    "main.css": "/space-voyager/static/css/main.3676215e.chunk.css",
-    "main.js": "/space-voyager/static/js/main.b6cb86e7.chunk.js",
-    "main.js.map": "/space-voyager/static/js/main.b6cb86e7.chunk.js.map",
+    "main.css": "/space-voyager/static/css/main.663ed2fc.chunk.css",
+    "main.js": "/space-voyager/static/js/main.f0fae26d.chunk.js",
+    "main.js.map": "/space-voyager/static/js/main.f0fae26d.chunk.js.map",
     "runtime-main.js": "/space-voyager/static/js/runtime-main.78f31c69.js",
     "runtime-main.js.map": "/space-voyager/static/js/runtime-main.78f31c69.js.map",
-    "static/js/2.dd633d69.chunk.js": "/space-voyager/static/js/2.dd633d69.chunk.js",
-    "static/js/2.dd633d69.chunk.js.map": "/space-voyager/static/js/2.dd633d69.chunk.js.map",
+    "static/css/2.a1596f27.chunk.css": "/space-voyager/static/css/2.a1596f27.chunk.css",
+    "static/js/2.ffc257d4.chunk.js": "/space-voyager/static/js/2.ffc257d4.chunk.js",
+    "static/js/2.ffc257d4.chunk.js.map": "/space-voyager/static/js/2.ffc257d4.chunk.js.map",
     "index.html": "/space-voyager/index.html",
-    "static/css/main.3676215e.chunk.css.map": "/space-voyager/static/css/main.3676215e.chunk.css.map",
-    "static/js/2.dd633d69.chunk.js.LICENSE.txt": "/space-voyager/static/js/2.dd633d69.chunk.js.LICENSE.txt",
+    "static/css/2.a1596f27.chunk.css.map": "/space-voyager/static/css/2.a1596f27.chunk.css.map",
+    "static/css/main.663ed2fc.chunk.css.map": "/space-voyager/static/css/main.663ed2fc.chunk.css.map",
+    "static/js/2.ffc257d4.chunk.js.LICENSE.txt": "/space-voyager/static/js/2.ffc257d4.chunk.js.LICENSE.txt",
+    "static/media/Earth.png": "/space-voyager/static/media/Earth.3974f972.png",
+    "static/media/Jupiter.png": "/space-voyager/static/media/Jupiter.f100a09b.png",
+    "static/media/Mars.png": "/space-voyager/static/media/Mars.b5659544.png",
+    "static/media/Mercury.png": "/space-voyager/static/media/Mercury.2e0eeab1.png",
+    "static/media/Neptune.png": "/space-voyager/static/media/Neptune.5abb03f5.png",
+    "static/media/Saturn.png": "/space-voyager/static/media/Saturn.b1f69fbf.png",
+    "static/media/Uranus.png": "/space-voyager/static/media/Uranus.c045705f.png",
+    "static/media/Venus.png": "/space-voyager/static/media/Venus.c1f6bcde.png",
     "static/media/img1.99083fab.png": "/space-voyager/static/media/img1.99083fab.png"
   },
   "entrypoints": [
     "static/js/runtime-main.78f31c69.js",
-    "static/js/2.dd633d69.chunk.js",
-    "static/css/main.3676215e.chunk.css",
-    "static/js/main.b6cb86e7.chunk.js"
+    "static/css/2.a1596f27.chunk.css",
+    "static/js/2.ffc257d4.chunk.js",
+    "static/css/main.663ed2fc.chunk.css",
+    "static/js/main.f0fae26d.chunk.js"
   ]
 }
