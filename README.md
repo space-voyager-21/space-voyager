@@ -1,5 +1,6 @@
 <h1>Hey Developers! Presenting you all the 'Space-Voyager'. </h1>
 <h2> <i> This project is still under construction. </i> </h2>
+<h2> Contribute here for the hacktoberfest ! </h2>
 
 ![space png](https://user-images.githubusercontent.com/79041510/134652654-3e9c740c-3b67-4a52-8809-0760c9c55364.png)
 
