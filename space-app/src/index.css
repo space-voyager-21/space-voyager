@@ -5,7 +5,12 @@ body{
   padding: 0;
   box-sizing: border-box;
   background-color:rgb(19, 2, 117);
+  overflow-y: scroll;
   
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 .main_heading{
@@ -56,7 +61,7 @@ body{
 }
 
 .particle{
-  position: absolute;
+  
   z-index: -1;
   width: 100%;
 }
