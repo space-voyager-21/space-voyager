@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/space-voyager/static/css/main.663ed2fc.chunk.css",
-    "main.js": "/space-voyager/static/js/main.fc7f0539.chunk.js",
-    "main.js.map": "/space-voyager/static/js/main.fc7f0539.chunk.js.map",
+    "main.css": "/space-voyager/static/css/main.80954e62.chunk.css",
+    "main.js": "/space-voyager/static/js/main.2f5f97cd.chunk.js",
+    "main.js.map": "/space-voyager/static/js/main.2f5f97cd.chunk.js.map",
     "runtime-main.js": "/space-voyager/static/js/runtime-main.78f31c69.js",
     "runtime-main.js.map": "/space-voyager/static/js/runtime-main.78f31c69.js.map",
     "static/css/2.a1596f27.chunk.css": "/space-voyager/static/css/2.a1596f27.chunk.css",
-    "static/js/2.ffc257d4.chunk.js": "/space-voyager/static/js/2.ffc257d4.chunk.js",
-    "static/js/2.ffc257d4.chunk.js.map": "/space-voyager/static/js/2.ffc257d4.chunk.js.map",
+    "static/js/2.15abc76a.chunk.js": "/space-voyager/static/js/2.15abc76a.chunk.js",
+    "static/js/2.15abc76a.chunk.js.map": "/space-voyager/static/js/2.15abc76a.chunk.js.map",
     "index.html": "/space-voyager/index.html",
     "static/css/2.a1596f27.chunk.css.map": "/space-voyager/static/css/2.a1596f27.chunk.css.map",
-    "static/css/main.663ed2fc.chunk.css.map": "/space-voyager/static/css/main.663ed2fc.chunk.css.map",
-    "static/js/2.ffc257d4.chunk.js.LICENSE.txt": "/space-voyager/static/js/2.ffc257d4.chunk.js.LICENSE.txt",
+    "static/css/main.80954e62.chunk.css.map": "/space-voyager/static/css/main.80954e62.chunk.css.map",
+    "static/js/2.15abc76a.chunk.js.LICENSE.txt": "/space-voyager/static/js/2.15abc76a.chunk.js.LICENSE.txt",
     "static/media/Earth.png": "/space-voyager/static/media/Earth.3974f972.png",
     "static/media/Jupiter.png": "/space-voyager/static/media/Jupiter.f100a09b.png",
     "static/media/Mars.png": "/space-voyager/static/media/Mars.b5659544.png",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.78f31c69.js",
     "static/css/2.a1596f27.chunk.css",
-    "static/js/2.ffc257d4.chunk.js",
-    "static/css/main.663ed2fc.chunk.css",
-    "static/js/main.fc7f0539.chunk.js"
+    "static/js/2.15abc76a.chunk.js",
+    "static/css/main.80954e62.chunk.css",
+    "static/js/main.2f5f97cd.chunk.js"
   ]
 }
