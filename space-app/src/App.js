@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './index.css';
+import './components/index.css';
 import img1 from './components/img1.png';
 import 'animate.css';
 
