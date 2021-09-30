@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from "react";
-import './components/index.css';
+import React, { useState } from "react";
 import img1 from './components/img1.png';
 import 'animate.css';
-
-
-
-
+import LoadTime from "./components/LoadTimePage";
 import Particles from 'react-particles-js';
 
 const api = {
@@ -32,20 +28,12 @@ function App() {
     if(evt.key === "Enter"){
   
       fetch(`${api.base}${query}`)
-      
-
       .then(res=>res.json())
       .then(result =>{
         setData(result);
         setQuery('');
         console.log(result);
       });
-      
-
-
-
-     
-
     }
   }
 
@@ -131,7 +119,7 @@ function App() {
           <h2> {data.englishName} </h2>
           </div>
           <div className="planimg">
-                  <img  src={require("../assets/"+data.englishName+".png").default} />
+                  <img alt="planimg" src={require("../assets/"+data.englishName+".png").default} />
             </div>
           
 
@@ -161,19 +149,12 @@ function App() {
     
           
 
-        ):('')}
+        ):(<LoadTime/>)}
         
-
         <div className="end">
           <h2> Made with 💗 in React by  <a href="https://mohittk.github.io"> Mohit  </a></h2>
           </div>
 
-
-
-        
-        
-      
-      
     </>
   );
 }
