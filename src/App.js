@@ -44,14 +44,14 @@ function App() {
         <div className="image2">
           <img src={img1} alt="main" />
         </div>
-        <div className="text">
+        <div data-testid="main_heading" className="text">
           <h1> Space Voyager </h1>
 
           <p> Explore the space at fingertips </p>
         </div>
       </div>
 
-      <div className="searchkabox">
+      <div data-testid="searchkabox" className="searchkabox">
         <input
           type="text"
           className="searchbar"
@@ -61,7 +61,7 @@ function App() {
           onKeyPress={search}
         />
       </div>
-      <Particles
+      <Particles data-testid="particle"
         className="particle"
         params={{
           particles: {
@@ -190,7 +190,7 @@ function App() {
         ""
       )}
 
-      <div className="end">
+      <div data-testid="footer" className="end">
         <h2>
           {" "}
           Made with 💗 in React by{" "}
