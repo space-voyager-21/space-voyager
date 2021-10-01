@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Poppins:wght@300&family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Poppins:wght@300&family=Secular+One&display=swap");
 
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color:rgb(19, 2, 117);
+  background-color: rgb(19, 2, 117);
   overflow-y: scroll;
-  
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
-.main_heading{
+.main_heading {
   text-align: center;
   padding: 1rem;
   margin: 1rem;
@@ -21,66 +20,59 @@ body::-webkit-scrollbar{
   border-radius: 5px;
 }
 
-
-.text h1{
-  font-family: 'Secular One', sans-serif;
+.text h1 {
+  font-family: "Secular One", sans-serif;
   font-size: 4.5rem;
   color: white;
-
 }
 
-.text p{
-  font-family: 'Secular One', sans-serif;
+.text p {
+  font-family: "Secular One", sans-serif;
   color: white;
   font-size: 1.5rem;
 }
-.image1 img{
+.image1 img {
   float: left;
   margin: 2rem;
   width: 15%;
   animation: rotation infinite 10s linear;
-
 }
-.image2 img{
+.image2 img {
   float: right;
   width: 15%;
   margin: 2rem;
   animation: rotation infinite 10s linear;
-
-
 }
 
-@keyframes rotation{
-  from{
-    transform:rotate(0deg);
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
 
-  to{
-    transform:rotate(360deg);
+  to {
+    transform: rotate(360deg);
   }
 }
 
-.particle{
+.particle {
   position: absolute;
   z-index: -1;
   width: 100%;
 }
 
-.body{
-
+.body {
   text-align: left;
   padding: 1rem;
   margin: 3rem;
   background-color: rgb(85, 102, 255);
   border-radius: 5px;
-
 }
 
-.searchkabox{
+.searchkabox {
   margin: 1rem;
-  text-align: center; 
+  text-align: center;
 }
-
+/*
 .searchkabox .searchbar{
   background-color:rgb(225, 228, 255);
   padding: 1rem;
@@ -88,79 +80,94 @@ body::-webkit-scrollbar{
   outline: none;
   border-radius:5px;
   border-color: white;
+} */
+.searchbar {
+  outline: none;
+  width: 90vw;
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 4px;
 }
 
-.searchkabox .searchbar::placeholder{
+.searchkabox .searchbar::placeholder {
   font-weight: bold;
   color: rgb(82, 82, 82);
   font-size: 1rem;
 }
 
-.detailbox{
+.detailbox {
   position: relative;
   margin: 3rem;
   text-align: left;
-  
-  
 }
-.detailbox h2{
+.detailbox h2 {
   color: white;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-size: 3rem;
   border-bottom: 2px solid whitesmoke;
-  
 }
 
-.planimg{
+.planimg {
   float: right;
-  
-
 }
 
-.planimg img{
-  width:400px;
+.planimg img {
+  width: 400px;
   height: 400px;
   margin: 6rem;
   animation: rotation infinite 15s linear;
- 
-  
 }
-.deepbox{
+.deepbox {
   position: relative;
   margin: 3rem;
   text-align: left;
-  
-  
 }
 
-.deepbox h3{
+.deepbox h3 {
   color: white;
   font-family: Poppins;
   font-size: 1.5rem;
   font-weight: 300;
-
 }
 
-.deepbox p{
+.deepbox p {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
-  text-align: justify; 
+  text-align: justify;
 }
 
-.end h2{
+.end h2 {
   font-size: 1.5rem;
   color: white;
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.end a{
-  color :rgb(251, 255, 0);
+.end a {
+  color: rgb(251, 255, 0);
 }
 
+@media only screen and (max-width: 670px) {
+  .searchbar {
+    width: 80vw;
+  }
+}
 
-
-
-
+@media only screen and (max-width: 600px) {
+  .planimg img {
+    width: 300px;
+    height: 300px;
+    margin: 4rem;
+    animation: rotation infinite 15s linear;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .planimg img {
+    width: 300px;
+    height: 300px;
+    margin: 2rem;
+    animation: rotation infinite 15s linear;
+  }
+}
