@@ -2,7 +2,8 @@
 <h4> <i> This project is still under construction. </i> </h4>
 <h4> Contribute here for the Hacktoberfest 2021 ! </h4>
 
-[![Netlify Deploy Status](https://api.netlify.com/api/v1/badges/65b89c92-9caa-463b-ac62-43beda9e85aa/deploy-status)](https://app.netlify.com/sites/space-voyager/deploys)
+https://space-voyager.vercel.app
+[Build Logs](https://vercel.com/space-v/space-voyager/A6vXUA9bdQ5AZGFDAQLt2YEYVM1v)
 
 ![space png](https://user-images.githubusercontent.com/79041510/134652654-3e9c740c-3b67-4a52-8809-0760c9c55364.png)
 
