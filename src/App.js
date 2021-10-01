@@ -199,13 +199,8 @@ function App() {
       ) : (
       ""
       )}
-<<<<<<< HEAD
-
-      <div data-testid="footer" className="end">
-=======
           {error===false  && load && querystatus===false && <LoadTime/>}
       <div className="end">
->>>>>>> e54a0610d91340fae71071ad02ee430e47895ddc
         <h2>
           {" "}
           Made with 💗 in React by{" "}
