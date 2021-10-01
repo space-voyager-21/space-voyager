@@ -9,8 +9,7 @@ afterEach(()=>{
 test ('searchbox should be in screen',()=>{
     render(<App/>);
     const searchkabox=screen.getByTestId("searchkabox");
-    expect (searchkabox).toBeInTheDocument;
-    
+    expect (searchkabox).toBeInTheDocument;  
 } )
 
 
