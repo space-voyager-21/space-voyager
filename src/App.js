@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import "./components/index.css";
+import "./index.css";
 import img1 from "./components/img1.png";
 import "animate.css";
 import "./components/error.css";
