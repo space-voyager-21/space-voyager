@@ -1,0 +1,33 @@
+.error__wrapper {
+  font-family: "Secular One", sans-serif;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+}
+.error__wrapper__img {
+  width: 70vw;
+  max-width: 300px;
+  animation: float 10s linear infinite;
+}
+.error__wrapper__text {
+  font-size: 1.5rem;
+  color: #fff;
+  
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
