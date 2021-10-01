@@ -6,6 +6,7 @@ afterEach(()=>{
     cleanup();
 });
 
+
 test ('searchbox should be in screen',()=>{
     render(<App/>);
     const searchkabox=screen.getByTestId("searchkabox");
