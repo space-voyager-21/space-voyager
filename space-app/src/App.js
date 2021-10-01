@@ -58,7 +58,7 @@ function App() {
         <div className="image2">
         <img src={img1} alt="main" />
         </div>
-        <div className="text">
+        <div data-testid="main_heading" className="text">
         <h1> Space Voyager </h1>
  
        
@@ -67,14 +67,14 @@ function App() {
         
       </div>
             
-      <div className="searchkabox">
+      <div data-testid="searchkabox" className="searchkabox">
         <input type="text" className="searchbar" placeholder="Enter Planet name here"
         onChange={e => setQuery(e.target.value)}
         value={query}
         onKeyPress={search}
         />      
         </div>
-        <Particles className="particle"
+        <Particles data-testid="particle"  className="particle"
     params={{
 	    "particles": {
 	        "number": {
@@ -135,7 +135,7 @@ function App() {
             </div>
           
 
-          <div className="deepbox">
+          <div data-testid="info" className="deepbox">
           
           <h3> Mass of {data.englishName} : {data.mass.massValue} <span>&#215;</span> 10<sup>{data.mass.massExponent}</sup> kg </h3>
           <h3> Mean Temprature of {data.englishName} : {data.avgTemp} K </h3>
@@ -164,7 +164,7 @@ function App() {
         ):('')}
         
 
-        <div className="end">
+        <div data-testid="footer" className="end">
           <h2> Made with 💗 in React by  <a href="https://mohittk.github.io"> Mohit  </a></h2>
           </div>
 
