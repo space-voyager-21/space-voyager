@@ -200,7 +200,7 @@ function App() {
       ""
       )}
           {error===false  && load && querystatus===false && <LoadTime/>}
-      <div className="end">
+      <div data-testid="footer" className="end">
         <h2>
           {" "}
           Made with 💗 in React by{" "}
