@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,useEffect} from "react";
 import "./components/index.css";
 import img1 from "./components/img1.png";
 import "animate.css";
 import "./components/error.css";
+import LoadTime from "./components/LoadTimePage"
 import axiosInstance from "./axios";
 import ErrorComponent from "./components/Error";
 
@@ -12,6 +13,8 @@ function App() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const [error, setError] = useState(false);
+  const [load,setLoad]=useState(false);
+  const[querystatus,setquerystatus]=useState(false);
   // const fetchApidata = async () => {
   //   const api = await fetch('https://api.le-systeme-solaire.net/rest/bodies/');
   //   const apiData = await api.json();
@@ -20,6 +23,11 @@ function App() {
   // ?key=23519497-32dcbbb5403142627fd458559&q=yellow+flowers&image_type=photo&pretty=true
   // }
 
+  useEffect(()=>{
+     setLoad(true);
+     setError(false);
+     setquerystatus(false);
+  },[]);
   const search = async (event) => {
     if (event.key === "Enter" && query.length !== 0) {
       //It handles the case when the input value is blank
@@ -27,10 +35,12 @@ function App() {
         setError(false);
         const result = await axiosInstance.get(query);
         setData(result.data);
+        setquerystatus(true);
         setQuery("");
       } catch (error) {
         setData("");
         setError(true);
+        setquerystatus(true);
       }
     }
   };
@@ -118,7 +128,7 @@ function App() {
             <h2> {data.englishName} </h2>
           </div>
           <div className="planimg">
-            <img
+            <img alt="planimg"
               src={require("../assets/" + data.englishName + ".png").default}
             />
           </div>
@@ -187,10 +197,15 @@ function App() {
           </div>
         </>
       ) : (
-        ""
+      ""
       )}
+<<<<<<< HEAD
 
       <div data-testid="footer" className="end">
+=======
+          {error===false  && load && querystatus===false && <LoadTime/>}
+      <div className="end">
+>>>>>>> e54a0610d91340fae71071ad02ee430e47895ddc
         <h2>
           {" "}
           Made with 💗 in React by{" "}
