@@ -70,7 +70,6 @@ body::-webkit-scrollbar {
 
 .searchkabox {
 	margin: 1rem;
-	text-align: center;
 }
 /*
 .searchkabox .searchbar{
@@ -83,17 +82,29 @@ border-color: white;
 } */
 .searchbar {
 	outline: none;
-	width: 90vw;
+	width: 88%;
 	padding: 1rem;
 	background-color: white;
 	border: 2px solid white;
 	border-radius: 4px;
+	display: inline-block;
+}
+
+.submit {
+	position: absolute;
+	width: 10%;
+	padding: 1rem;
+	border-radius: 4px;
+	cursor:pointer;
+	display: inline-block;
 }
 
 .searchkabox .searchbar::placeholder {
 	font-weight: bold;
 	color: rgb(82, 82, 82);
 	font-size: 1rem;
+	width: 100%;
+	display: inline-block;
 }
 
 .detailbox {
