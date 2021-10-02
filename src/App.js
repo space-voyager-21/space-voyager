@@ -1,4 +1,4 @@
-import React, { useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./components/index.css";
 import img1 from "./components/img1.png";
 import "animate.css";
@@ -14,8 +14,8 @@ function App() {
   const [path, setPath] = useState([]);
   const [query, setQuery] = useState("");
   const [error, setError] = useState(false);
-  const [load,setLoad]=useState(false);
-  const[querystatus,setquerystatus]=useState(false);
+  const [load, setLoad] = useState(false);
+  const [querystatus, setquerystatus] = useState(false);
   // const fetchApidata = async () => {
   //   const api = await fetch('https://api.le-systeme-solaire.net/rest/bodies/');
   //   const apiData = await api.json();
@@ -24,34 +24,33 @@ function App() {
   // ?key=23519497-32dcbbb5403142627fd458559&q=yellow+flowers&image_type=photo&pretty=true
   // }
 
-  useEffect(()=>{
-     setLoad(true);
-     setError(false);
-     setquerystatus(false);
-  },[]);
-  const search = async (event) => {
-    if (event.key === "Enter" && query.length !== 0) {
-      //It handles the case when the input value is blank
+  useEffect(() => {
+    setLoad(true);
+    setError(false);
+    setquerystatus(false);
+  }, []);
+
+  const fetchData = async (event) => {
+    event.preventDefault();
+    try {
+      setError(false);
+      const result = await axiosInstance.get(query);
+      setData(result.data);
       try {
-        setError(false);
-        const result = await axiosInstance.get(query);
-        setData(result.data);
-        try{
-          const imgPath = require("../assets/" + result.data.englishName + ".png").default;
-          setPath(imgPath);
-        }
-        catch {
-          setPath(img1);
-        }
-        setquerystatus(true);
-        setQuery("");
-      } catch (error) {
-        setData("");
-        setError(true);
-        setquerystatus(true);
-      }      
+        const imgPath = require("../assets/" + result.data.englishName + ".png").default;
+        setPath(imgPath);
+      }
+      catch {
+        setPath(img1);
+      }
+      setquerystatus(true);
+      setQuery("");
+    } catch (error) {
+      setData("");
+      setError(true);
+      setquerystatus(true);
     }
-  };
+  }
 
   return (
     <>
@@ -70,14 +69,16 @@ function App() {
       </div>
 
       <div data-testid="searchkabox" className="searchkabox">
-        <input
-          type="text"
-          className="searchbar"
-          placeholder="Type Planet name then press enter to search"
-          onChange={(e) => setQuery(e.target.value)}
-          value={query}
-          onKeyPress={search}
-        />
+        <form onSubmit={fetchData}>
+          <input
+            type="text"
+            className="searchbar"
+            placeholder="Type Planet name then press enter to search"
+            onChange={(e) => setQuery(e.target.value)}
+            value={query}
+          />
+          <input className="submit" type="submit" value="Submit" />
+        </form>
       </div>
       <Particles data-testid="particle"
         className="particle"
@@ -205,9 +206,9 @@ function App() {
           </div>
         </>
       ) : (
-      ""
+        ""
       )}
-          {error===false  && load && querystatus===false && <LoadTime/>}
+      {error === false && load && querystatus === false && <LoadTime />}
       <div data-testid="footer" className="end">
         <h2>
           {" "}
