@@ -11,6 +11,7 @@ import Particles from "react-particles-js";
 
 function App() {
   const [data, setData] = useState([]);
+  const [path, setPath] = useState([]);
   const [query, setQuery] = useState("");
   const [error, setError] = useState(false);
   const [load,setLoad]=useState(false);
@@ -35,13 +36,20 @@ function App() {
         setError(false);
         const result = await axiosInstance.get(query);
         setData(result.data);
+        try{
+          const imgPath = require("../assets/" + result.data.englishName + ".png").default;
+          setPath(imgPath);
+        }
+        catch {
+          setPath(img1);
+        }
         setquerystatus(true);
         setQuery("");
       } catch (error) {
         setData("");
         setError(true);
         setquerystatus(true);
-      }
+      }      
     }
   };
 
@@ -129,7 +137,7 @@ function App() {
           </div>
           <div className="planimg">
             <img alt="planimg"
-              src={require("../assets/" + data.englishName + ".png").default}
+              src={path}
             />
           </div>
 
