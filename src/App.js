@@ -46,7 +46,7 @@ function App() {
       }
       setquerystatus(true);
       setQuery("");
-    } catch (error) {
+    } catch (err) {
       setData("");
       setError(true);
       setquerystatus(true);
