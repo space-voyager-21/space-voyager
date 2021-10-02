@@ -69,35 +69,51 @@ body::-webkit-scrollbar {
 }
 
 .searchkabox {
-	margin: 1rem;
+	text-align: center;
 }
-/*
+
 .searchkabox .searchbar{
 background-color:rgb(225, 228, 255);
 padding: 1rem;
-width: 98%;
+width: 80%;
+border: none;
 outline: none;
 border-radius:5px;
 border-color: white;
-} */
-.searchbar {
+} 
+/* .searchbar {
 	outline: none;
-	width: 88%;
+	width: 85%;
 	padding: 1rem;
 	background-color: white;
-	border: 2px solid white;
+	border: none;
 	border-radius: 4px;
 	display: inline-block;
+} */
+
+input[type="submit"]{
+	padding: 1rem;
+	margin: 0.5rem;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	font-weight: bold;
+
+}
+input[type="submit"]:hover{
+	padding: 1rem;
+	margin: 0.5rem;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	font-weight: bold;
+	background-color: rgb(85, 102, 255);
+
 }
 
-.submit {
-	position: absolute;
-	width: 10%;
-	padding: 1rem;
-	border-radius: 4px;
-	cursor:pointer;
-	display: inline-block;
-}
+
 
 .searchkabox .searchbar::placeholder {
 	font-weight: bold;
@@ -159,6 +175,8 @@ border-color: white;
 .end a {
 	color: rgb(251, 255, 0);
 }
+
+
 
 @media only screen and (max-width: 670px) {
 	.searchbar {
