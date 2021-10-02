@@ -3,6 +3,7 @@ import "./components/index.css";
 import img1 from "./components/img1.png";
 import "animate.css";
 import "./components/error.css";
+import "./components/LoadTimePage.css";
 import LoadTime from "./components/LoadTimePage"
 import axiosInstance from "./axios";
 import ErrorComponent from "./components/Error";
@@ -45,7 +46,7 @@ function App() {
       }
       setquerystatus(true);
       setQuery("");
-    } catch (error) {
+    } catch (err) {
       setData("");
       setError(true);
       setquerystatus(true);
