@@ -21,7 +21,7 @@ function IssMap() {
         };
 
         const loader = new Loader({
-            apiKey: "API-Key",
+            apiKey: "AIzaSyAgBnhWZh77iXBO7OCWfpaApqkYAAWdw18",
             version: "weekly"
         });
 
