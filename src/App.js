@@ -211,7 +211,7 @@ function App() {
       )}
       {error === false && load && querystatus === false && <LoadTime />}
       <div data-testid="footer" className="end">
-        <h2>
+        <h2 data-testid="footerText">
           {" "}
           Made with 💗 in React by{" "}
           <a href="https://mohittk.github.io"> Mohit </a>
