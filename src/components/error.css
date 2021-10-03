@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 .error__wrapper {
   font-family: "Secular One", sans-serif;
   width: 100%;
@@ -7,10 +8,18 @@
   justify-content:space-between;
   align-items: center;
 }
+.error__wrapper__quote{
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 1rem black;
+  font-family: 'Black Ops One', cursive;
+
+  
+}
 .error__wrapper__img {
   width: 70vw;
   max-width: 300px;
-  animation: float 10s linear infinite;
+  animation: float 7s linear infinite;
 }
 .error__wrapper__text {
   font-size: 1.5rem;
@@ -23,8 +32,8 @@
     opacity: 1;
   }
   50% {
-    transform: translateY(-70px);
-    opacity: 0;
+    transform: translateY(-60px);
+    opacity: 1;
   }
   100% {
     transform: translateY(0px);

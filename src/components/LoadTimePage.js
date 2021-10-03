@@ -10,7 +10,7 @@ function LoadTime() {
         width="30%"
         height="30%"
       />
-      <h2 style={{ marginBottom: "10%", color: "white" }}>
+      <h2 style={{ marginBottom: "10%", color: "white", }}>
         Search for the Planets! I am sure you will find something that interests
         you 😁
       </h2>
