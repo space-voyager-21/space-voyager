@@ -22,7 +22,7 @@ const LandingPage = () => {
         <div data-testid="main_heading" className="text">
           <h1> Space Voyager </h1>
 
-          <p> Explore the space at fingertips </p>
+          <p> Explore the space at fingertips now </p>
         </div>
       </div>
       <Particles
