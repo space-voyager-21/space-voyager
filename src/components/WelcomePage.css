@@ -1,3 +1,7 @@
+.container{
+  display:grid;
+  place-items: center;
+}
 .load__wrapper__img {
     padding-top:7%;
             width: 70vw;
@@ -10,7 +14,7 @@
           opacity: 1;
         }
         50% {
-          transform: translateY(-70px);
+          transform: translateY(-80px);
           opacity: 1;
         }
         100% {
@@ -18,5 +22,22 @@
           opacity: 1;
         }
       }
+
+      .typing {
+        
+                  
+        width: 100%;
+        animation: typing 7s  infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        
+      }
+      
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+      
     
     

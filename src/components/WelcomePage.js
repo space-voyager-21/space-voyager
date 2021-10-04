@@ -1,4 +1,5 @@
 import React from "react";
+import './WelcomePage.css';
 
 function Welcomepage() {
   return (
@@ -6,21 +7,20 @@ function Welcomepage() {
       <img
         alt="img-satelite"
         className="load__wrapper__img"
-        src={require("../components/satellite.png").default}
-        width="30%"
-        height="30%"
+        src={require("../components/logo.png").default}
+        width="100%"
+        
       />
-      <h2
+      <h2 className="typing"
         style={{
           marginBottom: "10%",
           color: "white",
           fontFamily: '"Secular One", sans-serif',
-          fontSize: "1.5rem",
+          fontSize: "2rem",
           fontStyle: "normal",
         }}
       >
-        Search for the Planets! I am sure you will find something that interests
-        you 😁
+        Welcome to the Space Exploration World !
       </h2>
     </div>
   );
