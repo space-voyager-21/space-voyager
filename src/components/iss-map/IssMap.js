@@ -11,8 +11,8 @@ function IssMap() {
         mapBody();
     }, []);
     const mapBody = async () => {
-        const resp = await get("http://api.open-notify.org/iss-now.json");
-        const { latitude, longitude } = resp.data.iss_position
+        const resp = await get("https://api.wheretheiss.at/v1/satellites/25544");
+        const { latitude, longitude } = resp.data
         updateDataFetched(true)
 
         const position = {
