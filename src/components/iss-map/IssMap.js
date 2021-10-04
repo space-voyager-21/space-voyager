@@ -7,7 +7,10 @@ import { Link } from "react-router-dom"
 function IssMap() {
     const [isDataFetched, updateDataFetched] = useState(false)
 
-    useEffect(async () => {
+    useEffect(() => {
+        mapBody();
+    }, []);
+    const mapBody = async () => {
         const resp = await get("http://api.open-notify.org/iss-now.json");
         const { latitude, longitude } = resp.data.iss_position
         updateDataFetched(true)
@@ -28,14 +31,12 @@ function IssMap() {
                 zoom: 4,
             });
 
-            const marker = new google.maps.Marker({
+            new google.maps.Marker({
                 position,
                 map,
             });
         });
-
-    }, []);
-
+    }
     return (
         <>
             <h1 className="map-heading">International Space Station Current Location</h1>
