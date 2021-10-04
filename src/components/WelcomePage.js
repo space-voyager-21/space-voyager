@@ -20,7 +20,7 @@ function Welcomepage() {
           fontStyle: "normal",
         }}
       >
-        Welcome to the Space Exploration World!
+        Welcome to the Space Exploration World !
       </h2>
     </div>
   );
