@@ -77,33 +77,34 @@ const LandingPage = () => {
         }}
       />
       <Router>
-    
+        <div className="cardblock">
           <div className="card__category">
-            
-              <Link className="main_page" to="/">
-                {" "}
-                Home
-              </Link>{" "}
-        
+
+            <Link className="main_page" to="/">
+              {" "}
+              Home
+            </Link>{" "}
+
           </div>
           <div className="card__category">
-          <Link className="page1" to="/planets">
+            <Link className="page1" to="/planets">
               {" "}
               Explore Planets{" "}
-            </Link> 
+            </Link>
           </div>
-          
+
 
           <div className="card__category">
-         <Link className="page2" to="/iss">
+            <Link className="page2" to="/iss">
               {" "}
               ISS Live Location{" "}
-            </Link> 
+            </Link>
           </div>
-          <Route exact path="/" component={WelcomePage} />
-          <Route exact path="/planets" component={App} />
-          <Route exact path="/iss" component={IssMap} />
-      
+        </div>
+        <Route exact path="/" component={WelcomePage} />
+        <Route exact path="/planets" component={App} />
+        <Route exact path="/iss" component={IssMap} />
+
 
         <div data-testid="footer" className="end">
           <h2 data-testid="footerText">
