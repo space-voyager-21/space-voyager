@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './components/index.css';
 import App from './App';
+import LandingPage from './Landingpage';
 
 
 ReactDOM.render(
   
-    <App />
+    <LandingPage />
     
   ,
   document.getElementById('root')
