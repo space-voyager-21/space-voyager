@@ -55,7 +55,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="main_heading">
+      {/* <div className="main_heading">
         <div className="image1">
           <img src={img1} alt="main" />
         </div>
@@ -67,10 +67,10 @@ function App() {
 
           <p> Explore the space at fingertips </p>
         </div>
-      </div>
+      </div> */}
       <Switch>
 
-        <Route path="/" exact >
+        <Route path="/planets/" exact >
 
           <div data-testid="searchkabox" className="searchkabox">
             <form onSubmit={fetchData}>
@@ -212,19 +212,17 @@ function App() {
             ""
           )}
           {error === false && load && querystatus === false && <LoadTime />}
-          <Link to="/iss-location" className="map-button" >View ISS Location</Link>
+          {/* <Link to="/iss-location" className="map-button" >View ISS Location</Link> */}
         </Route>
-        <Route path="/iss-location" >
-          <IssMap />
-        </Route>
+        
       </Switch>
-      <div data-testid="footer" className="end">
+      {/* <div data-testid="footer" className="end">
         <h2 data-testid="footerText">
           {" "}
           Made with 💗 in React by{" "}
           <a href="https://mohittk.github.io"> Mohit </a>
         </h2>
-      </div>
+      </div> */}
     </BrowserRouter>
   );
 }
