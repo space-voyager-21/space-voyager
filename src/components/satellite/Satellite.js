@@ -47,33 +47,34 @@ export default class Satellite extends Component {
     if (!this.inputIsValid(value)) return;
     const suggestedResults = await this.fetchSatellitesData(value);
     if (!suggestedResults) {
-      this.setState({suggestedResults: []});
+      this.setState({ suggestedResults: [] });
       return;
     }
     const trimmedResults = suggestedResults.slice(0, 10);
-    const satNames = []
+    const satNames = [];
     for (const res of trimmedResults) {
       satNames.push(res.Sattelite.moderateInfo.name);
     }
     satNames.sort();
-    this.setState({suggestedResults: satNames});
-  }
-  fetchSatellitesData = async(satName) => {
+    this.setState({ suggestedResults: satNames });
+  };
+  fetchSatellitesData = async (satName) => {
     try {
       const response = await fetch(
-          "https://space-api-abh80.vercel.app/sats?q=" + encodeURIComponent(satName)
+        "https://space-api-abh80.vercel.app/sats?q=" +
+          encodeURIComponent(satName)
       );
       return await response.json();
     } catch (e) {
       return null;
     }
-  }
+  };
   inputIsValid = (inputStr) => {
     return inputStr && inputStr.trim() !== "";
-  }
+  };
   renderSuggestedSattelites(sats) {
-    return sats.map(function(s) {
-      return <option value={s} key={`${s}-id`}></option>
+    return sats.map(function (s) {
+      return <option value={s} key={`${s}-id`}></option>;
     });
   }
   render() {
@@ -110,9 +111,16 @@ export default class Satellite extends Component {
                             x.country_name_en.toLowerCase() ===
                             this.state.data.moderateInfo.country_of_origin.toLowerCase()
                         )
-                        ?.alpha2?.toLowerCase() ||
-                      this.state.data.moderateInfo.country_of_origin ===
-                        "United States"
+                        ?.alpha2?.toLowerCase()
+                        ? allCountriesList()
+                            .find(
+                              (x) =>
+                                x.country_name_en.toLowerCase() ===
+                                this.state.data.moderateInfo.country_of_origin.toLowerCase()
+                            )
+                            ?.alpha2?.toLowerCase()
+                        : this.state.data.moderateInfo.country_of_origin ===
+                          "United States"
                         ? "us"
                         : undefined) +
                       "/flat/64.png"
