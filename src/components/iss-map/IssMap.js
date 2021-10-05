@@ -43,9 +43,9 @@ function IssMap() {
             {
                 isDataFetched ?
                     <div id="map"></div> :
-                    <h1>loading</h1>
+                    <h1> Loading... </h1>
             }
-            <Link to="/" className="map-button" >Back</Link>
+           
         </>
     )
 }

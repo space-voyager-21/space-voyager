@@ -1,12 +1,13 @@
 import React from "react";
+import './LoadTimePage.css';
 
 function LoadTime() {
   return (
     <div className="container" style={{ textAlign: "center" }}>
       <img
         alt="img-satelite"
-        className="load__wrapper__img"
-        src={require("../components/satellite.png").default}
+        className="load__wrapper__img2"
+        src={require("../components/planets.png").default}
         width="100%"
       />
       <h2
