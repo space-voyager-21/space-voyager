@@ -23,28 +23,59 @@ export default class Satellite extends Component {
        */
       data: null,
       error: false,
+      suggestedResults: [],
     };
     this.state.handleSubmit = this.handleSubmit.bind(this);
+    this.state.handleChange = this.handleChange.bind(this);
   }
   handleSubmit = async (e) => {
     e.preventDefault();
     this.setState({ error: false, data: null });
     const value = e.target.children[0].value;
-    if (!value?.trim()) return;
+    if (!this.inputIsValid(value)) return;
     e.target.children[0].value = "";
-    try {
-      const response = await fetch(
-        "https://space-api-abh80.vercel.app/sats?q=" + encodeURIComponent(value)
-      );
-
-      const data = await response.json();
-
+    const data = await this.fetchSatellitesData(value);
+    if (data) {
       this.setState({ data: data[0].Sattelite });
-    } catch (e) {
+    } else {
       this.setState({ error: true });
     }
   };
-
+  handleChange = async (e) => {
+    e.preventDefault();
+    const value = e.target.value;
+    if (!this.inputIsValid(value)) return;
+    const suggestedResults = await this.fetchSatellitesData(value);
+    if (!suggestedResults) {
+      this.setState({suggestedResults: []});
+      return;
+    }
+    const trimmedResults = suggestedResults.slice(0, 10);
+    const satNames = []
+    for (const res of trimmedResults) {
+      satNames.push(res.Sattelite.moderateInfo.name);
+    }
+    satNames.sort();
+    this.setState({suggestedResults: satNames});
+  }
+  fetchSatellitesData = async(satName) => {
+    try {
+      const response = await fetch(
+          "https://space-api-abh80.vercel.app/sats?q=" + encodeURIComponent(satName)
+      );
+      return await response.json();
+    } catch (e) {
+      return null;
+    }
+  }
+  inputIsValid = (inputStr) => {
+    return inputStr && inputStr.trim() !== "";
+  }
+  renderSuggestedSattelites(sats) {
+    return sats.map(function(s) {
+      return <option value={s} key={`${s}-id`}></option>
+    });
+  }
   render() {
     return (
       <div className={styles["content-body"]}>
@@ -54,7 +85,12 @@ export default class Satellite extends Component {
               type="text"
               className="searchbar"
               placeholder="Type Satellite name then press enter to search"
+              onChange={this.handleChange}
+              list="sat-suggestions"
             />
+            <datalist id="sat-suggestions">
+              {this.renderSuggestedSattelites(this.state.suggestedResults)}
+            </datalist>
             <input className="submit" type="submit" value="Submit" />
           </form>
         </div>
