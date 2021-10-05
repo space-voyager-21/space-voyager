@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Satellite.module.css";
-import LoadTime from "../LoadTimePage";
+import LoadTimeSat from "./Loadtimesat";
 import Error from "../Error";
 import { allCountriesList } from "countries-code";
 export default class Satellite extends Component {
@@ -141,7 +141,7 @@ export default class Satellite extends Component {
                 {this.state.data.moderateInfo.sattelite_bus ?? "N/A"}
               </h3>
             </div>
-          )) || <LoadTime />}
+          )) || <LoadTimeSat />}
       </div>
     );
   }
