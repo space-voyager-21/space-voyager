@@ -43,7 +43,7 @@ function IssMap() {
             {
                 isDataFetched ?
                     <div id="map"></div> :
-                    <h1> Loading... </h1>
+                    <div class="lds-hourglass"></div>
             }
            
         </>
