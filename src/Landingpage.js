@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Particles from "react-particles-js";
 import App from "./App";
 // import "./cards.css";
-import './components/index.css';
+import "./components/index.css";
 import IssMap from "./components/iss-map/IssMap.js";
 import "./Landingpage.css";
 import WelcomePage from "./components/WelcomePage";
+import Satellite from "./components/satellite/Satellite";
 const LandingPage = () => {
   return (
     <>
@@ -79,12 +80,10 @@ const LandingPage = () => {
       <Router>
         <div className="cardblock">
           <div className="card__category">
-
             <Link className="main_page" to="/">
               {" "}
               Home
             </Link>{" "}
-
           </div>
           <div className="card__category">
             <Link className="page1" to="/planets">
@@ -92,7 +91,6 @@ const LandingPage = () => {
               Explore Planets{" "}
             </Link>
           </div>
-
 
           <div className="card__category">
             <Link className="page2" to="/iss">
@@ -104,7 +102,7 @@ const LandingPage = () => {
         <Route exact path="/" component={WelcomePage} />
         <Route exact path="/planets" component={App} />
         <Route exact path="/iss" component={IssMap} />
-
+        <Route exact path="/satellite" component={Satellite} />
 
         <div data-testid="footer" className="end">
           <h2 data-testid="footerText">
