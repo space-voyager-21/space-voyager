@@ -68,13 +68,17 @@ export default class Satellite extends Component {
                     alt=""
                     src={
                       "https://www.countryflags.io/" +
-                      allCountriesList()
+                      (allCountriesList()
                         .find(
                           (x) =>
                             x.country_name_en.toLowerCase() ===
                             this.state.data.moderateInfo.country_of_origin.toLowerCase()
                         )
-                        ?.alpha2?.toLowerCase() +
+                        ?.alpha2?.toLowerCase() ||
+                      this.state.data.moderateInfo.country_of_origin ===
+                        "United States"
+                        ? "us"
+                        : undefined) +
                       "/flat/64.png"
                     }
                   ></img>
