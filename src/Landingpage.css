@@ -1,0 +1,89 @@
+.cards {
+  text-align: center;
+  align-content: center;
+}
+.cardblock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.card__category {
+  /* font-size: 2rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 2rem;
+    padding: 2rem; */
+
+  padding: 2rem;
+ 
+  margin: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(85, 102, 255);
+  border-radius: 8px;
+  transition: 0.3s all ease-in-out;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card__category:hover{
+  transform: scale(1.2);
+}
+
+/* .card__category:hover {
+    flex: 1;
+    font-size: 1.5rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 4rem;
+    padding: 2rem;
+    background-color: rgb(85, 102, 255);
+    border-radius:8px;
+    transform: scale(1.1);
+
+} */
+.main_page,
+.page1,
+.page2 {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none; 
+}
+
+@media only screen and (max-width: 870px) {
+  .cardblock {
+    display: flex;
+    flex-direction: row;
+  }
+  .card__category {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    margin: 2rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(85, 102, 255);
+    border-radius: 8px;
+    transition: 0.3s all ease-in-out;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .main_page,
+  .page1,
+  .page2 {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .cardblock {
+    display: flex;
+    flex-direction: column;
+  }
+  .main_page,
+  .page1,
+  .page2 {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+}

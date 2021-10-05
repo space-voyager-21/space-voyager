@@ -34,12 +34,12 @@ body::-webkit-scrollbar {
 .image1 img {
 	float: left;
 	margin: 2rem;
-	width: 15%;
+	width: 12%;
 	animation: rotation infinite 10s linear;
 }
 .image2 img {
 	float: right;
-	width: 15%;
+	width: 12%;
 	margin: 2rem;
 	animation: rotation infinite 10s linear;
 }
