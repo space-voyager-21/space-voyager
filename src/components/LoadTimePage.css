@@ -1,21 +1,17 @@
-.load__wrapper__img {
-padding-top:7%;
-        width: 70vw;
-        max-width: 300px;
-    animation: floating 10s linear infinite;
+.load__wrapper__img2 {
+  margin: 2rem;
+  max-width: 30%;
+    animation: rotation 30s linear infinite;
   }
-  @keyframes floating {
-    0% {
-      transform: translateY(0px);
-      opacity: 1;
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
     }
-    50% {
-      transform: translateY(-70px);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(0px);
-      opacity: 1;
+  
+    to {
+      transform: rotate(360deg);
     }
   }
+
+  
 

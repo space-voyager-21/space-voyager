@@ -5,7 +5,7 @@
 .load__wrapper__img {
     padding-top:7%;
             width: 70vw;
-            max-width: 300px;
+            max-width: 25%;
         animation: floating 10s linear infinite;
       }
       @keyframes floating {
