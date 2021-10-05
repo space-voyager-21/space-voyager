@@ -16,7 +16,7 @@
     padding: 2rem; */
 
   padding: 2rem;
- 
+
   margin: 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(85, 102, 255);
@@ -24,9 +24,10 @@
   transition: 0.3s all ease-in-out;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
 }
 
-.card__category:hover{
+.card__category:hover {
   transform: scale(1.2);
 }
 
@@ -46,7 +47,7 @@
 .page2 {
   font-size: 2rem;
   color: white;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 870px) {
@@ -72,6 +73,8 @@
     font-size: 1rem;
     color: white;
     text-decoration: none;
+    user-select: none;
+    cursor: normal;
   }
 }
 @media only screen and (max-width: 630px) {
@@ -85,5 +88,7 @@
     font-size: 1rem;
     color: white;
     text-decoration: none;
+    user-select: none;
+    cursor: normal;
   }
 }

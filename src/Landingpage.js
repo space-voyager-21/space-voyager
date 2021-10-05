@@ -79,25 +79,19 @@ const LandingPage = () => {
       />
       <Router>
         <div className="cardblock">
-          <div className="card__category">
-            <Link className="main_page" to="/">
-              {" "}
-              Home
-            </Link>{" "}
-          </div>
-          <div className="card__category">
-            <Link className="page1" to="/planets">
-              {" "}
-              Explore Planets{" "}
-            </Link>
-          </div>
+          <Link className="card__category" to="/">
+            <span className="page1">Home</span>
+          </Link>
+          <Link className="card__category" to="/planets">
+            <span className="page1"> Explore Planets </span>
+          </Link>
 
-          <div className="card__category">
-            <Link className="page2" to="/iss">
-              {" "}
-              ISS Live Location{" "}
-            </Link>
-          </div>
+          <Link className="card__category" to="/iss">
+            <span className="page2"> ISS Live Location </span>
+          </Link>
+          <Link className="card__category" to="/satellite">
+            <span class="page2"> Satellites </span>
+          </Link>
         </div>
         <Route exact path="/" component={WelcomePage} />
         <Route exact path="/planets" component={App} />
