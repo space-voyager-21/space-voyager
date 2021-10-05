@@ -1,0 +1,19 @@
+.content-body {
+  color: white;
+}
+.satellite-info {
+  padding: 10px;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 3rem;
+}
+.satellite-info h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: "Merriweather Sans", sans-serif;
+}
+.satellite-info h1 img {
+  position: relative;
+  top: 15px;
+}

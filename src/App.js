@@ -4,7 +4,7 @@ import img1 from "./components/img1.png";
 import "animate.css";
 import "./components/error.css";
 import "./components/LoadTimePage.css";
-import LoadTime from "./components/LoadTimePage"
+import LoadTime from "./components/LoadTimePage";
 import axiosInstance from "./axios";
 import ErrorComponent from "./components/Error";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
@@ -38,10 +38,11 @@ function App() {
       const result = await axiosInstance.get(query);
       setData(result.data);
       try {
-        const imgPath = require("../assets/" + result.data.englishName + ".png").default;
+        const imgPath = require("../assets/" +
+          result.data.englishName +
+          ".png").default;
         setPath(imgPath);
-      }
-      catch {
+      } catch {
         setPath(img1);
       }
       setquerystatus(true);
@@ -51,7 +52,7 @@ function App() {
       setError(true);
       setquerystatus(true);
     }
-  }
+  };
 
   return (
     <BrowserRouter>
@@ -69,9 +70,7 @@ function App() {
         </div>
       </div> */}
       <Switch>
-
-        <Route path="/planets/" exact >
-
+        <Route path="/planets/" exact>
           <div data-testid="searchkabox" className="searchkabox">
             <form onSubmit={fetchData}>
               <input
@@ -84,7 +83,8 @@ function App() {
               <input className="submit" type="submit" value="Submit" />
             </form>
           </div>
-          <Particles data-testid="particle"
+          <Particles
+            data-testid="particle"
             className="particle"
             params={{
               particles: {
@@ -141,9 +141,7 @@ function App() {
                 <h2> {data.englishName} </h2>
               </div>
               <div className="planimg">
-                <img alt="planimg"
-                  src={path}
-                />
+                <img alt="planimg" src={path} />
               </div>
 
               <div className="deepbox">
@@ -184,11 +182,13 @@ function App() {
                 </h3>
                 <h3>
                   {" "}
-                  Rotation period of {data.englishName}: {data.sideralRotation} hrs{" "}
+                  Rotation period of {data.englishName}: {data.sideralRotation}{" "}
+                  hrs{" "}
                 </h3>
                 <h3>
                   {" "}
-                  Revolution period of {data.englishName}: {data.sideralOrbit} days{" "}
+                  Revolution period of {data.englishName}: {data.sideralOrbit}{" "}
+                  days{" "}
                 </h3>
                 <h3>
                   {" "}
@@ -214,7 +214,6 @@ function App() {
           {error === false && load && querystatus === false && <LoadTime />}
           {/* <Link to="/iss-location" className="map-button" >View ISS Location</Link> */}
         </Route>
-        
       </Switch>
       {/* <div data-testid="footer" className="end">
         <h2 data-testid="footerText">

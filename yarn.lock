@@ -3686,6 +3686,11 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+countries-code@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/countries-code/-/countries-code-1.1.0.tgz#7dde5aa802479bb8c476f41e6411e146f320ae09"
+  integrity sha512-INPrBQnD7RxMFlZ9bPFaO3Elxg9n7tzZm+9AEE980f30xwmG5tqPKuYU9vRx01RoSdUKx2AG+AqfdDyxd+vbKg==
+
 create-ecdh@^4.0.0:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
@@ -11443,8 +11448,10 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
+    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
