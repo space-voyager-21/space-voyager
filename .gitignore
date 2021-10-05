@@ -26,5 +26,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Yarn files
-yarn.lock
+
 yarn-error.log
