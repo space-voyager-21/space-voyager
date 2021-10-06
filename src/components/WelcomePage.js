@@ -11,17 +11,18 @@ function Welcomepage() {
         width="100%"
         
       />
-      <h2 className="typing"
+      <span className="typing"
         style={{
-          marginBottom: "10%",
+  
           color: "white",
           fontFamily: '"Secular One", sans-serif',
-          fontSize: "2rem",
+   
+    
           fontStyle: "normal",
         }}
       >
         Welcome to the Space Exploration World !
-      </h2>
+      </span>
     </div>
   );
 }
