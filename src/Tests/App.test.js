@@ -1,9 +1,10 @@
-import {render,screen,cleanup} from '@testing-library/react';
+import {render,screen,cleanup,getByTestId} from '@testing-library/react';
 import App from '../App';
 import Error from '../components/Error'
 import  ReactDOM from 'react-dom';
 import react from 'react';
 import {isTSAnyKeyword } from '@babel/types';
+import '../components/satellite/Satellite'
 
 import 'jest-canvas-mock';
 
@@ -14,7 +15,7 @@ afterEach(()=>{
 
 test ('searchbox should be in screen',()=>{
     render(<App/>);
-    const searchkabox=screen.getByTestId("searchkabox");
+    const searchkabox=screen.queryByTestId("searchkabox");
     expect (searchkabox).toBeInTheDocument;  
 } )
 
@@ -23,13 +24,13 @@ test ('searchbox should be in screen',()=>{
 
 test ('main_heading',()=>{
     render(<App/>);
-    const main_heading=screen.getByTestId("main_heading");
+    const main_heading=screen.queryByTestId("main_heading");
     expect (main_heading).toBeInTheDocument;
 } )
 
 test ('footer',()=>{
     render(<App/>);
-    const footer=screen.getByTestId("footer");
+    const footer=screen.queryByTestId("footer");
     expect (footer).toBeInTheDocument;
     
 
@@ -37,7 +38,7 @@ test ('footer',()=>{
 
 test ('footerText',()=>{
     render(<App/>);
-    const footerText=screen.getByTestId("footerText");
+    const footerText=screen.queryByTestId("footerText");
     expect (footerText).toBeInTheDocument;
     
     
@@ -48,7 +49,7 @@ test ('footerText',()=>{
 
 test ('error existance verification',()=>{
     render(<Error/>);
-    const error=screen.getByTestId("error");
+    const error=screen.queryByTestId("error");
     expect (error).toBeInTheDocument;
 } )
 
