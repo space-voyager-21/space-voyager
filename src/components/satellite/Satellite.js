@@ -3,6 +3,7 @@ import styles from "./Satellite.module.css";
 import LoadTimeSat from "./Loadtimesat";
 import Error from "../Error";
 import { allCountriesList } from "countries-code";
+import Constants from '../Constant';
 export default class Satellite extends Component {
   constructor(props) {
     super(props);
@@ -61,8 +62,8 @@ export default class Satellite extends Component {
   fetchSatellitesData = async (satName) => {
     try {
       const response = await fetch(
-        "https://space-api-abh80.vercel.app/sats?q=" +
-          encodeURIComponent(satName)
+        Constants.URL +
+        encodeURIComponent(satName)
       );
       return await response.json();
     } catch (e) {

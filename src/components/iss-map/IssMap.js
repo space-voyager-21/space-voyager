@@ -3,6 +3,7 @@ import { Loader } from "@googlemaps/js-api-loader";
 import './IssMap.css';
 import { get } from 'axios';
 import { Link } from "react-router-dom"
+import Constants from '../Constant';
 
 function IssMap() {
     const [isDataFetched, updateDataFetched] = useState(false)
@@ -11,7 +12,7 @@ function IssMap() {
         mapBody();
     }, []);
     const mapBody = async () => {
-        const resp = await get("https://api.wheretheiss.at/v1/satellites/25544");
+        const resp = await get(Constants.IssURL);
         const { latitude, longitude } = resp.data
         updateDataFetched(true)
 
@@ -21,8 +22,8 @@ function IssMap() {
         };
 
         const loader = new Loader({
-            apiKey: "AIzaSyAgBnhWZh77iXBO7OCWfpaApqkYAAWdw18",
-            version: "weekly"
+            apiKey: Constants.apiKey,
+            version: Constants.version
         });
 
         loader.load().then((google) => {

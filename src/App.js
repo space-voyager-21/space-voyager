@@ -7,6 +7,7 @@ import "./components/LoadTimePage.css";
 import LoadTime from "./components/LoadTimePage";
 import axiosInstance from "./axios";
 import ErrorComponent from "./components/Error";
+import Constants from "./components/Constant";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import Particles from "react-particles-js";
 import IssMap from "./components/iss-map/IssMap";
@@ -84,55 +85,9 @@ function App() {
             </form>
           </div>
           <Particles
-            data-testid="particle"
-            className="particle"
-            params={{
-              particles: {
-                number: {
-                  value: 200,
-                  density: {
-                    enable: true,
-                  },
-                },
-                size: {
-                  value: 5,
-                  random: true,
-                  anim: {
-                    speed: 4,
-                    size_min: 0.3,
-                  },
-                },
-                line_linked: {
-                  enable: false,
-                },
-                move: {
-                  random: true,
-                  speed: 1,
-                  direction: "top",
-                  out_mode: "out",
-                },
-              },
-              interactivity: {
-                events: {
-                  onhover: {
-                    enable: true,
-                    mode: "bubble",
-                  },
-                },
-                modes: {
-                  bubble: {
-                    distance: 250,
-                    duration: 1,
-                    size: 0,
-                    opacity: 0,
-                  },
-                  repulse: {
-                    distance: 400,
-                    duration: 4,
-                  },
-                },
-              },
-            }}
+            data-testid={Constants.particleName}
+            className={Constants.particleName}
+            params={Constants.particleParam}
           />
           {error && <ErrorComponent />}
           {typeof data.name != "undefined" ? (

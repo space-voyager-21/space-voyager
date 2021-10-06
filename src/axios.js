@@ -1,6 +1,7 @@
 import axios from "axios";
+import Constants from "./components/Constant";
 
 const axiosInstance=axios.create({
-    baseURL:"https://api.le-systeme-solaire.net/rest/bodies/"
+    baseURL:Constants.BaseURL
 })
 export default axiosInstance;
