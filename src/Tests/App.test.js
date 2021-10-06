@@ -1,4 +1,4 @@
-import {render,screen,cleanup,getByTestId} from '@testing-library/react';
+import {render,screen,cleanup} from '@testing-library/react';
 import App from '../App';
 import Error from '../components/Error'
 import  ReactDOM from 'react-dom';
