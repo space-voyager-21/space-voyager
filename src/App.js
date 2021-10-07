@@ -89,7 +89,7 @@ function App() {
             className={Constants.particleName}
             params={Constants.particleParam}
           />
-          {error && <ErrorComponent />}
+          {error && <ErrorComponent type="planet" />}
           {typeof data.name != "undefined" ? (
             <>
               <div className="detailbox">

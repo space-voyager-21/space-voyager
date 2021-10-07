@@ -3,7 +3,7 @@ import styles from "./Satellite.module.css";
 import LoadTimeSat from "./Loadtimesat";
 import Error from "../Error";
 import { allCountriesList } from "countries-code";
-import Constants from '../Constant';
+import Constants from "../Constant";
 export default class Satellite extends Component {
   constructor(props) {
     super(props);
@@ -61,10 +61,7 @@ export default class Satellite extends Component {
   };
   fetchSatellitesData = async (satName) => {
     try {
-      const response = await fetch(
-        Constants.URL +
-        encodeURIComponent(satName)
-      );
+      const response = await fetch(Constants.URL + encodeURIComponent(satName));
       return await response.json();
     } catch (e) {
       return null;
@@ -96,7 +93,7 @@ export default class Satellite extends Component {
             <input className="submit" type="submit" value="Submit" />
           </form>
         </div>
-        {(this.state.error && <Error />) ||
+        {(this.state.error && <Error type="satellite" />) ||
           (this.state.data && (
             <div className={styles["satellite-info"]}>
               <h1>
