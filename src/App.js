@@ -107,7 +107,7 @@ function App() {
                 </h3>
                 <h3>
                   {" "}
-                  Mean Temprature of {data.englishName} : {data.avgTemp} K{" "}
+                  Mean Temperature of {data.englishName} : {data.avgTemp} K{" "}
                 </h3>
                 <h3>
                   {" "}
