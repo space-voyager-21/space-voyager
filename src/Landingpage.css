@@ -14,7 +14,8 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 2rem;
     padding: 2rem; */
-
+  display: flex;
+  align-items: center;
   padding: 2rem;
 
   margin: 1rem;
@@ -29,6 +30,10 @@
 
 .card__category:hover {
   transform: scale(1.2);
+}
+
+span {
+  margin: 0 auto;
 }
 
 /* .card__category:hover {
