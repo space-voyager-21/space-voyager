@@ -1,54 +1,73 @@
-.container{
-  display:grid;
+.container {
+  display: grid;
   place-items: center;
 }
 .load__wrapper__img {
-    padding-top:7%;
-            width: 70vw;
-            max-width: 25%;
-        animation: floating 10s linear infinite;
-      }
-      @keyframes floating {
-        0% {
-          transform: translateY(0px);
-          opacity: 1;
-        }
-        50% {
-          transform: translateY(-80px);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(0px);
-          opacity: 1;
-        }
-      }
+  padding-top: 7%;
+  width: 70vw;
+  max-width: 25%;
+  animation: floating 10s linear infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-80px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 
-      .typing {
-        
-                  
-        width: 100%;
-        font-size: 2em;
-        animation: typing 7s  infinite;
-        white-space: nowrap;
-        
-        overflow: hidden;
-        
-      }
-      
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-      }
+.typing {
+  width: 100%;
+  font-size: 2em;
+  animation: typing 7s infinite;
+  white-space: nowrap;
 
+  overflow: hidden;
+}
 
-/* On screens that are 600px wide or less */
-@media screen and (max-width: 600px) {
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* On screens that are 1200px wide or less */
+@media screen and (max-width: 1200px) {
+  @keyframes floating {
+    50% {
+      transform: translateY(-50px);
+      opacity: 1;
+    }
+  }
+}
+
+/* On screens that are 870px wide or less */
+@media screen and (max-width: 870px) {
+  @keyframes floating {
+    50% {
+      transform: translateY(-40px);
+      opacity: 1;
+    }
+  }
+}
+
+/* On screens that are 630px wide or less */
+@media screen and (max-width: 630px) {
+  @keyframes floating {
+    50% {
+      transform: translateY(-20px);
+      opacity: 1;
+    }
+  }
   .typing {
-    
     color: white;
     font-size: 1rem;
   }
 }
-    
-    
