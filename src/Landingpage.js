@@ -9,6 +9,7 @@ import IssMap from "./components/iss-map/IssMap.js";
 import "./Landingpage.css";
 import WelcomePage from "./components/WelcomePage";
 import Satellite from "./components/satellite/Satellite";
+import Apod from './components/apod/Apod';
 const LandingPage = () => {
   return (
     <>
@@ -92,11 +93,15 @@ const LandingPage = () => {
           <Link className="card__category" to="/satellite">
             <span class="page2"> Satellites </span>
           </Link>
+          <Link className="card__category" to="/apod">
+            <span class="page2"> Apod </span>
+          </Link>
         </div>
         <Route exact path="/" component={WelcomePage} />
         <Route exact path="/planets" component={App} />
         <Route exact path="/iss" component={IssMap} />
         <Route exact path="/satellite" component={Satellite} />
+        <Route exact path="/apod" component={Apod} />
 
         <div data-testid="footer" className="end">
           <h2 data-testid="footerText">
