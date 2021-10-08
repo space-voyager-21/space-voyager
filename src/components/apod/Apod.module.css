@@ -1,0 +1,47 @@
+.apod {
+  margin: auto;
+  height: 800px;
+  width: 800px;
+  margin-bottom: 270px;
+}
+.apod__image img {
+  height: 100%;
+  width: 100%;
+}
+.apod__image {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.apod__image:hover {
+  transform: scale(1.05);
+}
+.apod__header {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-bottom: 50px;
+}
+.apod__description {
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 870px) {
+  .apod {
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .apod__image img {
+    height: 100%;
+    width: 100%;
+  }
+}
