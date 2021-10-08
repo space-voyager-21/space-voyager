@@ -17,3 +17,9 @@
   position: relative;
   top: 15px;
 }
+
+.Satellite_satellite-info__2UzBF h3, [class*="satellite-info"] h3 {
+  display: list-item;
+  list-style-type: '🛰 ';
+  list-style-position: inside;
+}
