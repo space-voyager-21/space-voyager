@@ -143,7 +143,7 @@ export default class Satellite extends Component {
                 Operator : {this.state.data.moderateInfo.operator ?? "N/A"}
               </h3>
               <h3>
-                Sattelite Bus :{" "}
+                Satellite Bus :{" "}
                 {this.state.data.moderateInfo.sattelite_bus ?? "N/A"}
               </h3>
             </div>

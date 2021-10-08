@@ -154,6 +154,9 @@ input[type="submit"]:hover {
   font-family: Poppins;
   font-size: 1.5rem;
   font-weight: 300;
+  display: list-item;
+  list-style-type: '🪐';
+  list-style-position: inside;
 }
 
 .deepbox p {
