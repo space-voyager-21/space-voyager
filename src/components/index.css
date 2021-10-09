@@ -143,6 +143,17 @@ input[type="submit"]:hover {
   margin: 6rem;
   animation: rotation infinite 15s linear;
 }
+.bar {
+  text-align: center;
+}
+
+.bar img {
+  width: 6%;
+  height: 6%;
+  margin: 2rem;
+  cursor: pointer;
+  animation: rotation infinite 15s linear;
+}
 .deepbox {
   position: relative;
   margin: 3rem;

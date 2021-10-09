@@ -7,6 +7,17 @@ let IssURL = "https://api.wheretheiss.at/v1/satellites/25544";
 let URL = "https://space-api-abh80.vercel.app/sats?q=";
 let BaseURL = "https://api.le-systeme-solaire.net/rest/bodies/";
 let NasaApiKey = "RMSK1F6elq4x31FQSsoAtQpfz7Zbsdr4OphLjrVn";
+let earthPath = "../images/Earth.png";
+let mercuryPath = "../images/Mercury.png";
+let venusPath = "../images/Venus.png";
+let jupiterPath = "../images/Jupiter.png";
+let saturnPath = "../images/Saturn.png";
+let uranusPath = "../images/Uranus.png";
+let neptunePath = "../images/Neptune.png";
+let plutoPath = "../images/Pluto.png";
+let marsPath = "../images/Mars.png";
+
+
 
 let particleParam = {
   particles: {
@@ -67,6 +78,15 @@ const Constants = {
   URL,
   BaseURL,
   NasaApiKey,
+  earthPath,
+  marsPath,
+  plutoPath,
+  neptunePath,
+  uranusPath,
+  saturnPath,
+  jupiterPath,
+  venusPath,
+  mercuryPath
 };
 
 export default Constants;
