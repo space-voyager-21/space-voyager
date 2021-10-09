@@ -1,3 +1,6 @@
+
+//All APIs used in the website can be found here.
+
 let apiKey = "AIzaSyAgBnhWZh77iXBO7OCWfpaApqkYAAWdw18";
 let version = "weekly";
 let IssURL = "https://api.wheretheiss.at/v1/satellites/25544";

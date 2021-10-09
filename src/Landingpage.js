@@ -3,7 +3,6 @@ import img1 from "./components/img1.png";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Particles from "react-particles-js";
 import App from "./App";
-// import "./cards.css";
 import "./components/index.css";
 import IssMap from "./components/iss-map/IssMap.js";
 import "./Landingpage.css";
