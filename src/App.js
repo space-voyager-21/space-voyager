@@ -32,8 +32,8 @@ function App() {
     setError(false);
     setquerystatus(false);
   }, []);
-  const fetchData = async (event) => {
-    event.preventDefault();
+
+  const storeData = async (query) => {
     try {
       setError(false);
       const result = await axiosInstance.get(query);
@@ -53,7 +53,17 @@ function App() {
       setError(true);
       setquerystatus(true);
     }
+  }
+
+  const fetchData = (event) => {
+    event.preventDefault();
+    storeData(query);
   };
+
+  const planetClick = (event,planetName) =>{
+    event.preventDefault();
+    storeData(planetName);
+  }
 
   return (
     <BrowserRouter>
@@ -83,6 +93,20 @@ function App() {
               />
               <input className="submit" type="submit" value="Submit" />
             </form>
+          </div>
+          <div>
+          <div className="bar">
+                {/* <img alt="Earth" title="Earth" src={Constants.earthPath} onClick={fetchData}/> */}
+                <img alt="Mercury" title="Mercury" src={Constants.mercuryPath} onClick={(event) => {planetClick(event,"Mercury")}}/>
+                <img alt="Venus" value="Venus" title="Venus" src={Constants.venusPath} onClick={(event) => {planetClick(event,"Venus")}}/>
+                <img alt="Earth" value="Earth" title="Earth" src={Constants.earthPath} onClick={(event) => {planetClick(event,"Earth")}}/>
+                <img alt="Mars" value="Mars" title="Mars" src={Constants.marsPath} onClick={(event) => {planetClick(event,"Mars")}}/>
+                <img alt="Jupiter" value="Jupiter" title="Jupiter" src={Constants.jupiterPath} onClick={(event) => {planetClick(event,"Jupiter")}}/>
+                <img alt="Saturn" value="Saturn" title="Saturn" src={Constants.saturnPath} onClick={(event) => {planetClick(event,"Saturn")}}/>
+                <img alt="Uranus" value="Uranus" title="Uranus" src={Constants.uranusPath} onClick={(event) => {planetClick(event,"Uranus")}}/>
+                <img alt="Neptune" value="Neptune" title="Neptune" src={Constants.neptunePath} onClick={(event) => {planetClick(event,"Neptune")}}/>
+                <img alt="Pluto" value="Pluto" title="Pluto" src={Constants.plutoPath} onClick={(event) => {planetClick(event,"Pluto")}}/>
+              </div>
           </div>
           <Particles
             data-testid={Constants.particleName}
