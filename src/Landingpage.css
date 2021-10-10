@@ -30,7 +30,7 @@
 }
 .card__category img{
   width: 100%;
-  height: 230px;
+  height: 200px;
   object-fit: cover;
   margin-bottom: 1rem;
 }
