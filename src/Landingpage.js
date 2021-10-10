@@ -80,24 +80,24 @@ const LandingPage = () => {
       <Router>
         <div className="cardblock">
           <Link className="card__category" to="/">
-            <img src="../images/bg-image.jpg" alt="mkdv" />
+            <img src="../images/home.png" id="navimg" alt="mkdv" />
             <span className="page1">Home</span>
           </Link>
           <Link className="card__category" to="/planets">
-          <img src="../images/bg-image.jpg" alt="mkdv" />
+          <img src="../images/planetexp.jpg" id="navimg" alt="mkdv" />
             <span className="page1"> Explore Planets </span>
           </Link>
 
           <Link className="card__category" to="/iss">
-          <img src="../images/bg-image.jpg" alt="mkdv" />
+          <img src="../images/iss.jpg" id="navimg" alt="mkdv" />
             <span className="page2"> ISS Live Location </span>
           </Link>
           <Link className="card__category" to="/satellite">
-          <img src="../images/bg-image.jpg" alt="mkdv" />
+          <img src="../images/satellite.jpg" id="navimg" alt="mkdv" />
             <span class="page2"> Satellites </span>
           </Link>
           <Link className="card__category" to="/apod">
-          <img src="../images/bg-image.jpg" alt="mkdv" />
+          <img src="../images/astronomypic.jpg"  id="navimg"alt="mkdv" />
             <span class="page2"> Apod </span>
           </Link>
         </div>
