@@ -18,7 +18,7 @@ export default function Apod() {
     <div className={styles["apod"]}>
       {apod && (
         <div>
-          <div className={styles["apod__main__header"]}>🌌Astronomy Pic of the day!🌌</div>
+            <div className={styles["apod__main__header"]}>🌌Astronomy Pic of the day!🌌</div>
           <div className={styles["apod__header"]}>{apod.title}</div>
           <div className={styles["apod__description"]}>{apod.explanation}</div>
         </div>
