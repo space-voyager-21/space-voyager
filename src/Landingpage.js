@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import img1 from "./components/img1.png";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import Particles from "react-particles-js";
 import App from "./App";
 import "./components/index.css";
@@ -80,19 +80,24 @@ const LandingPage = () => {
       <Router>
         <div className="cardblock">
           <Link className="card__category" to="/">
+            <img src="../images/bg-image.jpg" alt="mkdv" />
             <span className="page1">Home</span>
           </Link>
           <Link className="card__category" to="/planets">
+          <img src="../images/bg-image.jpg" alt="mkdv" />
             <span className="page1"> Explore Planets </span>
           </Link>
 
           <Link className="card__category" to="/iss">
+          <img src="../images/bg-image.jpg" alt="mkdv" />
             <span className="page2"> ISS Live Location </span>
           </Link>
           <Link className="card__category" to="/satellite">
+          <img src="../images/bg-image.jpg" alt="mkdv" />
             <span class="page2"> Satellites </span>
           </Link>
           <Link className="card__category" to="/apod">
+          <img src="../images/bg-image.jpg" alt="mkdv" />
             <span class="page2"> Apod </span>
           </Link>
         </div>
