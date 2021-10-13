@@ -11,6 +11,15 @@ import Satellite from "./components/satellite/Satellite";
 import Apod from "./components/apod/Apod";
 import Tilt from "react-parallax-tilt";
 
+
+const scrollToBottom = () => {
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: "auto",
+    /* you can also use 'auto' behaviour
+		in place of 'smooth' */
+  });
+};
 const LandingPage = () => {
   return (
     <>
@@ -82,35 +91,47 @@ const LandingPage = () => {
       <Router>
         <div className="cardblock">
           <Tilt>
-            <Link className="card__category" to="/">
-              <img src="../images/home.png" id="navimg" alt="mkdv" />
-              <span className="page1">Home</span>
-            </Link>
+          <Link className="card__category" to="/" onClick={scrollToBottom}>
+            <img src="../images/home.png" id="navimg" alt="mkdv" />
+
+            <span className="page1">Home</span>
+          </Link>
+          </Tilt>
+
+<Tilt>
+          <Link
+            className="card__category"
+            to="/planets"
+            onClick={scrollToBottom}
+          >
+            <img src="../images/planetexp.jpg" alt="mkdv" />
+            <span className="page1"> Explore Planets </span>
+          </Link>
+          </Tilt>
+          
+          <Tilt>
+          <Link className="card__category" to="/iss" onClick={scrollToBottom}>
+            <img src="../images/iss.jpg" alt="mkdv" />
+            <span className="page2"> ISS Live Location </span>
+          </Link>
           </Tilt>
 
           <Tilt>
-            <Link className="card__category" to="/planets">
-              <img src="../images/planetexp.jpg" alt="mkdv" />
-              <span className="page1"> Explore Planets </span>
-            </Link>
+          <Link
+            className="card__category"
+            to="/satellite"
+            onClick={scrollToBottom}
+          >
+            <img src="../images/satellite.jpg" alt="mkdv" />
+            <span class="page2"> Satellites </span>
+          </Link>
           </Tilt>
+
           <Tilt>
-            <Link className="card__category" to="/iss">
-              <img src="../images/iss.jpg" alt="mkdv" />
-              <span className="page2"> ISS Live Location </span>
-            </Link>
-          </Tilt>
-          <Tilt>
-            <Link className="card__category" to="/satellite">
-              <img src="../images/satellite.jpg" alt="mkdv" />
-              <span class="page2"> Satellites </span>
-            </Link>
-          </Tilt>
-          <Tilt>
-            <Link className="card__category" to="/apod">
-              <img src="../images/astronomypic.jpg" alt="mkdv" />
-              <span class="page2"> Apod </span>
-            </Link>
+          <Link className="card__category" to="/apod" onClick={scrollToBottom}>
+            <img src="../images/astronomypic.jpg" alt="mkdv" />
+            <span class="page2"> Apod </span>
+          </Link>
           </Tilt>
         </div>
         <Route exact path="/" component={WelcomePage} />
