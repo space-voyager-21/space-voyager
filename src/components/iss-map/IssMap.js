@@ -33,7 +33,7 @@ function IssMap() {
           height="650px"
           pushPins={[
             {
-             options : { icon: "/images/iss_icon.png"},
+             options : {},
               center: {
                 latitude: isDataFetched.lat,
                 longitude: isDataFetched.lng,
