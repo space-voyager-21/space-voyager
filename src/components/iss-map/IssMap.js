@@ -9,7 +9,7 @@ function IssMap() {
 
   useEffect(() => {
     mapBody().then(() => {
-      setInterval(mapBody, 10000);
+      setInterval(mapBody, 3000);
     });
   }, []);
   const mapBody = async () => {
