@@ -1,10 +1,3 @@
-#map {
-    height       : 500px;
-    /* The height is 400 pixels */
-    width        : 100%;
-    /* The width is the width of the web page */
-    margin-bottom: 20px;
-}
 
 .map-heading {
     text-align : center;
@@ -12,16 +5,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.map-button {
-    text-decoration : none;
-    text-align      : center;
-    padding         : 10px 50px;
-    background-color: #088000;
-    color           : white;
-    margin-left     : 45%;
-    font-size       : 20px;
-    border-radius   : 5px;
-}
+
 
 .map-button:hover {
     background-color: #089222;
