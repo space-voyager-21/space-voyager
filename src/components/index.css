@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Poppins:wght@300&family=Secular+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Poppins:wght@300&family=Secular+One&display=swap');
 
 body {
   margin: 0;
@@ -21,13 +21,13 @@ body::-webkit-scrollbar {
 }
 
 .text h1 {
-  font-family: "Secular One", sans-serif;
+  font-family: 'Secular One', sans-serif;
   font-size: 4.5rem;
   color: white;
 }
 
 .text p {
-  font-family: "Secular One", sans-serif;
+  font-family: 'Secular One', sans-serif;
   color: white;
   font-size: 1.5rem;
 }
@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
 	display: inline-block;
 } */
 
-input[type="submit"] {
+input[type='submit'] {
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 5px;
@@ -101,7 +101,7 @@ input[type="submit"] {
   font-weight: bold;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) background-color 0.4s;
 }
-input[type="submit"]:hover {
+input[type='submit']:hover {
   padding: 1rem;
   margin: 0.5rem;
   cursor: pointer;
@@ -128,7 +128,7 @@ input[type="submit"]:hover {
 }
 .detailbox h2 {
   color: white;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   font-size: 3rem;
   border-bottom: 2px solid whitesmoke;
 }
@@ -147,13 +147,13 @@ input[type="submit"]:hover {
   text-align: center;
 }
 
-.bar img {
-  width: 6%;
+/* .bar img {
+width: 6%;
   height: 6%;
   margin: 2rem;
   cursor: pointer;
   animation: rotation infinite 15s linear;
-}
+} */
 .deepbox {
   position: relative;
   margin: 3rem;
@@ -181,7 +181,7 @@ input[type="submit"]:hover {
   font-size: 1.5rem;
   color: white;
   text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .end a {
