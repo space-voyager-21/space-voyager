@@ -14,88 +14,50 @@
   border-radius: 100%;
 }
 
-.planet-mercury:focus {
-  border: 4px dotted #fa965f;
-  border-radius: 100%;
-}
-
 .planet-venus:hover {
   width: 110%;
   border: 4px dotted #fddc6e;
   border-radius: 100%;
 }
 
-.planet-venus:focus {
-  border: 4px dotted #fddc6e;
-  border-radius: 100%;
-}
 .planet-earth:hover {
   width: 110%;
   border: 4px dotted #a6e7f0;
   border-radius: 100%;
 }
 
-.planet-earth:focus {
-  border: 4px dotted #a6e7f0;
-  border-radius: 100%;
-}
 .planet-mars:hover {
   width: 110%;
   border: 4px dotted #f95c3d;
   border-radius: 100%;
 }
 
-.planet-mars:focus {
-  border: 4px dotted #f95c3d;
-  border-radius: 100%;
-}
 .planet-jupiter:hover {
   width: 110%;
   border: 4px dotted #fcd042;
   border-radius: 100%;
 }
 
-.planet-jupiter:focus {
-  border: 4px dotted #fcd042;
-  border-radius: 100%;
-}
 .planet-saturn:hover {
   width: 110%;
   border: 4px dotted #fbaa5b;
   border-radius: 100%;
 }
 
-.planet-saturn:focus {
-  border: 4px dotted #fbaa5b;
-  border-radius: 100%;
-}
 .planet-uranus:hover {
   width: 110%;
   border: 4px dotted #5ac3ff;
   border-radius: 100%;
 }
 
-.planet-uranus:focus {
-  border: 4px dotted #5ac3ff;
-  border-radius: 100%;
-}
 .planet-neptune:hover {
   width: 110%;
   border: 4px dotted #6487ff;
   border-radius: 100%;
 }
 
-.planet-neptune:focus {
-  border: 4px dotted #6487ff;
-  border-radius: 100%;
-}
 .planet-pluto:hover {
   width: 110%;
-  border: 4px dotted #c39b69;
-  border-radius: 100%;
-}
-
-.planet-pluto:focus {
   border: 4px dotted #c39b69;
   border-radius: 100%;
 }
