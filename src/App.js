@@ -105,7 +105,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-mercury"
                   alt="Mercury"
                   title="Mercury"
                   src={Constants.mercuryPath}
@@ -117,7 +117,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-venus"
                   alt="Venus"
                   title="Venus"
                   src={Constants.venusPath}
@@ -129,7 +129,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-earth"
                   alt="Earth"
                   title="Earth"
                   src={Constants.earthPath}
@@ -141,7 +141,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-mars"
                   alt="Mars"
                   title="Mars"
                   src={Constants.marsPath}
@@ -153,7 +153,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-jupiter"
                   alt="Jupiter"
                   title="Jupiter"
                   src={Constants.jupiterPath}
@@ -165,7 +165,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-saturn"
                   alt="Saturn"
                   title="Saturn"
                   src={Constants.saturnPath}
@@ -177,7 +177,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-uranus"
                   alt="Uranus"
                   title="Uranus"
                   src={Constants.uranusPath}
@@ -189,7 +189,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-neptune"
                   alt="Neptune"
                   title="Neptune"
                   src={Constants.neptunePath}
@@ -201,7 +201,7 @@ function App() {
                 }}
               >
                 <img
-                  className="planet"
+                  className="planet planet-pluto"
                   alt="Pluto"
                   title="Pluto"
                   src={Constants.plutoPath}
