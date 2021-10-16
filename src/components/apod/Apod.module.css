@@ -1,8 +1,7 @@
 
 .apod {
   margin: auto;
-  height: 800px;
-  width: 800px;
+  height: fit-content;
   text-align: center;
   margin-bottom: 270px;
   text-align: center;
@@ -45,7 +44,17 @@
   margin-top: 10px;
   font-weight: 500;
   font-family: sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+.player-wrapper {
+  position: relative;
+  padding: 20px; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 @media only screen and (max-width: 870px) {
   .apod {
@@ -54,7 +63,7 @@
     margin-top: 10px;
     margin-bottom: 50px;
   }
-  .apod__image img {
+  .player-wrapper {
     height: 100%;
     width: 100%;
   }

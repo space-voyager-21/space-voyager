@@ -12,6 +12,8 @@ import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import Particles from "react-particles-js";
 import IssMap from "./components/iss-map/IssMap";
 
+import "./PlanetStyles.css";
+
 function App() {
   const [data, setData] = useState([]);
   const [path, setPath] = useState([]);
@@ -32,7 +34,15 @@ function App() {
     setError(false);
     setquerystatus(false);
   }, []);
-
+  useEffect(() => {
+    const p = Array.from(document.querySelectorAll(".planet-button"));
+    p.filter((e) => e.classList.contains("planet-is-active")).forEach((e) => {
+      e.classList.remove("planet-is-active");
+    });
+    p.find((x) =>
+      x.classList.contains("planet-" + data?.englishName?.toLowerCase())
+    )?.classList.toggle("planet-is-active");
+  }, [data]);
   const storeData = async (query) => {
     try {
       setError(false);
@@ -53,17 +63,17 @@ function App() {
       setError(true);
       setquerystatus(true);
     }
-  }
+  };
 
   const fetchData = (event) => {
     event.preventDefault();
     storeData(query);
   };
 
-  const planetClick = (event,planetName) =>{
+  const planetClick = (event, planetName) => {
     event.preventDefault();
     storeData(planetName);
-  }
+  };
 
   return (
     <BrowserRouter>
@@ -95,18 +105,126 @@ function App() {
             </form>
           </div>
           <div>
-          <div className="bar">
-                {/* <img alt="Earth" title="Earth" src={Constants.earthPath} onClick={fetchData}/> */}
-                <img alt="Mercury" title="Mercury" src={Constants.mercuryPath} onClick={(event) => {planetClick(event,"Mercury")}}/>
-                <img alt="Venus" value="Venus" title="Venus" src={Constants.venusPath} onClick={(event) => {planetClick(event,"Venus")}}/>
-                <img alt="Earth" value="Earth" title="Earth" src={Constants.earthPath} onClick={(event) => {planetClick(event,"Earth")}}/>
-                <img alt="Mars" value="Mars" title="Mars" src={Constants.marsPath} onClick={(event) => {planetClick(event,"Mars")}}/>
-                <img alt="Jupiter" value="Jupiter" title="Jupiter" src={Constants.jupiterPath} onClick={(event) => {planetClick(event,"Jupiter")}}/>
-                <img alt="Saturn" value="Saturn" title="Saturn" src={Constants.saturnPath} onClick={(event) => {planetClick(event,"Saturn")}}/>
-                <img alt="Uranus" value="Uranus" title="Uranus" src={Constants.uranusPath} onClick={(event) => {planetClick(event,"Uranus")}}/>
-                <img alt="Neptune" value="Neptune" title="Neptune" src={Constants.neptunePath} onClick={(event) => {planetClick(event,"Neptune")}}/>
-                <img alt="Pluto" value="Pluto" title="Pluto" src={Constants.plutoPath} onClick={(event) => {planetClick(event,"Pluto")}}/>
-              </div>
+            <div className="planets">
+              {/* <img alt="Earth" title="Earth" src={Constants.earthPath} onClick={fetchData}/> */}
+              <button
+                className="planet-mercury planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Mercury");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Mercury"
+                  title="Mercury"
+                  src={Constants.mercuryPath}
+                />
+              </button>
+              <button
+                className="planet-venus planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Venus");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Venus"
+                  title="Venus"
+                  src={Constants.venusPath}
+                />
+              </button>
+              <button
+                className="planet-earth planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Earth");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Earth"
+                  title="Earth"
+                  src={Constants.earthPath}
+                />
+              </button>
+              <button
+                className="planet-mars planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Mars");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Mars"
+                  title="Mars"
+                  src={Constants.marsPath}
+                />
+              </button>
+              <button
+                className="planet-jupiter planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Jupiter");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Jupiter"
+                  title="Jupiter"
+                  src={Constants.jupiterPath}
+                />
+              </button>
+              <button
+                className="planet-saturn planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Saturn");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Saturn"
+                  title="Saturn"
+                  src={Constants.saturnPath}
+                />
+              </button>
+              <button
+                className="planet-uranus planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Uranus");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Uranus"
+                  title="Uranus"
+                  src={Constants.uranusPath}
+                />
+              </button>
+              <button
+                className="planet-neptune planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Neptune");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Neptune"
+                  title="Neptune"
+                  src={Constants.neptunePath}
+                />
+              </button>
+              <button
+                className="planet-pluto planet-button"
+                onClick={(event) => {
+                  planetClick(event, "Pluto");
+                }}
+              >
+                <img
+                  className="planet"
+                  alt="Pluto"
+                  title="Pluto"
+                  src={Constants.plutoPath}
+                />
+              </button>
+            </div>
           </div>
           <Particles
             data-testid={Constants.particleName}

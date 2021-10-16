@@ -1,54 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import { Loader } from "@googlemaps/js-api-loader";
-import './IssMap.css';
-import { get } from 'axios';
-import { Link } from "react-router-dom"
-import Constants from '../Constant';
+import React, { useState, useEffect } from "react";
+import "./IssMap.css";
+import { get } from "axios";
+import BingMapsReact from "bingmaps-react";
+import Constants from "../Constant";
 
 function IssMap() {
-    const [isDataFetched, updateDataFetched] = useState(false)
+  const [isDataFetched, updateDataFetched] = useState(null);
 
-    useEffect(() => {
-        mapBody();
-    }, []);
-    const mapBody = async () => {
-        const resp = await get(Constants.IssURL);
-        const { latitude, longitude } = resp.data
-        updateDataFetched(true)
+  useEffect(() => {
+    mapBody().then(() => {
+      setInterval(mapBody, 3000);
+    });
+  }, []);
+  const mapBody = async () => {
+    const resp = await get(Constants.IssURL);
+    const { latitude, longitude } = resp.data;
 
-        const position = {
-            lat: +latitude,
-            lng: +longitude
-        };
-
-        const loader = new Loader({
-            apiKey: Constants.apiKey,
-            version: Constants.version
-        });
-
-        loader.load().then((google) => {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                center: position,
-                zoom: 4,
-            });
-
-            new google.maps.Marker({
-                position,
-                map,
-            });
-        });
-    }
-    return (
-        <>
-            <h1 className="map-heading">International Space Station Current Location</h1>
+    const position = {
+      lat: +latitude,
+      lng: +longitude,
+    };
+    updateDataFetched(position);
+  };
+  return (
+    <>
+      <h1 className="map-heading">
+        International Space Station Current Location
+      </h1>
+      {(isDataFetched && (
+        <BingMapsReact
+          bingMapsKey={Constants.BingMapsApiKey}
+          height="650px"
+          pushPins={[
             {
-                isDataFetched ?
-                    <div id="map"></div> :
-                    <div class="lds-hourglass"></div>
-            }
-           
-        </>
-    )
+             options : {},
+              center: {
+                latitude: isDataFetched.lat,
+                longitude: isDataFetched.lng,
+              },
+             
+            },
+          ]}
+          viewOptions={{
+            zoom: 3,
+            center: {
+              latitude: isDataFetched.lat,
+              longitude: isDataFetched.lng,
+            },
+            mapTypeId: "standard",
+          }}
+        />
+      )) || <div className="lds-hourglass" />}
+    </>
+  );
 }
 
 export default IssMap;

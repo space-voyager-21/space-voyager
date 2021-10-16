@@ -1,8 +1,7 @@
 <h2>Hey Developers! Presenting you all the 'Space-Voyager'. </h2>
 
 
-
-![image](https://user-images.githubusercontent.com/79041510/136077451-d4196a17-f9a4-4bf5-8b55-593627433c1a.png)
+![image](https://user-images.githubusercontent.com/79041510/136692364-1a0c11db-dcc9-4168-9fd1-4e948933a353.png)
 ![image](https://user-images.githubusercontent.com/79041510/136077311-746ac1b6-99d1-4d12-b781-e72a2f2fb7af.png)
 
 

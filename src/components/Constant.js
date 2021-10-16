@@ -1,4 +1,3 @@
-
 //All APIs used in the website can be found here.
 
 let apiKey = "AIzaSyAgBnhWZh77iXBO7OCWfpaApqkYAAWdw18";
@@ -16,8 +15,6 @@ let uranusPath = "../images/Uranus.png";
 let neptunePath = "../images/Neptune.png";
 let plutoPath = "../images/Pluto.png";
 let marsPath = "../images/Mars.png";
-
-
 
 let particleParam = {
   particles: {
@@ -68,6 +65,8 @@ let particleParam = {
 };
 
 let particleName = "particle";
+let BingMapsApiKey =
+  "ArzzxnJL3kIXivIC-8MEX9gdGPx20A5RkAGyQkm23tnJieJJSjDMvZcy1GnNx1gW";
 
 const Constants = {
   particleParam,
@@ -86,7 +85,8 @@ const Constants = {
   saturnPath,
   jupiterPath,
   venusPath,
-  mercuryPath
+  mercuryPath,
+  BingMapsApiKey,
 };
 
 export default Constants;

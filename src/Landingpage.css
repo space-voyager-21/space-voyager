@@ -39,9 +39,6 @@
   margin-bottom: 1rem;
 }
 
-.card__category:hover {
-  transform: scale(1.1);
-}
 
 span {
   margin: 0 auto;
