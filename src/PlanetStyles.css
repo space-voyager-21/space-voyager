@@ -71,10 +71,6 @@
   padding: 15px;
   cursor: pointer;
 }
-.planet-button:hover {
-  border: 4px dotted #f95c3d;
-  border-radius: 100%;
-}
 .planet-button:hover .planet {
   transform : scale(1.2);
 }
