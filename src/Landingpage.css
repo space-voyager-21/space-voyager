@@ -9,6 +9,27 @@
   margin: 0 auto;
 }
 
+.github-button img{
+  height: 36px;
+}
+
+.github-button .github{
+  line-height: 0;
+  border: .5px solid black;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+
+
+}
+
+.github-button .github:hover {
+  transform: scale(1.1);
+
+}
+
 
 .card__category {
   /* font-size: 2rem;
