@@ -34,7 +34,15 @@ function App() {
     setError(false);
     setquerystatus(false);
   }, []);
-
+  useEffect(() => {
+    const p = Array.from(document.querySelectorAll(".planet-button"));
+    p.filter((e) => e.classList.contains("planet-is-active")).forEach((e) => {
+      e.classList.remove("planet-is-active");
+    });
+    p.find((x) =>
+      x.classList.contains("planet-" + data?.englishName?.toLowerCase())
+    )?.classList.toggle("planet-is-active");
+  }, [data]);
   const storeData = async (query) => {
     try {
       setError(false);

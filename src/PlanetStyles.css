@@ -2,60 +2,50 @@
   width: 100%;
   height: auto;
   transition: all 0.3s ease-in-out;
-
 }
 .planet-mercury:hover {
-  
   border: 4px dotted #fa965f;
   border-radius: 100%;
 }
 
 .planet-venus:hover {
-  
   border: 4px dotted #fddc6e;
   border-radius: 100%;
 }
 
 .planet-earth:hover {
-  
   border: 4px dotted #a6e7f0;
   border-radius: 100%;
 }
 
 .planet-mars:hover {
-  
   border: 4px dotted #f95c3d;
   border-radius: 100%;
 }
 
 .planet-jupiter:hover {
-  
   border: 4px dotted #fcd042;
   border-radius: 100%;
 }
 
 .planet-saturn:hover {
-  
   border: 4px dotted #fbaa5b;
   padding: 25px;
   border-radius: 100%;
 }
 
 .planet-uranus:hover {
-  
   border: 4px dotted #5ac3ff;
   padding: 25px;
   border-radius: 100%;
 }
 
 .planet-neptune:hover {
-  
   border: 4px dotted #6487ff;
   border-radius: 100%;
 }
 
 .planet-pluto:hover {
-  
   border: 4px dotted #c39b69;
   border-radius: 100%;
 }
@@ -72,7 +62,7 @@
   cursor: pointer;
 }
 .planet-button:hover .planet {
-  transform : scale(1.2);
+  transform: scale(1.2);
 }
 .planets {
   max-width: 85vw;
@@ -105,4 +95,50 @@
     width: 80px;
     height: 80px;
   }
+}
+.planet-mercury.planet-is-active {
+  border: 4px dotted #fa965f;
+  border-radius: 100%;
+}
+
+.planet-venus.planet-is-active {
+  border: 4px dotted #fddc6e;
+  border-radius: 100%;
+}
+
+.planet-earth.planet-is-active {
+  border: 4px dotted #a6e7f0;
+  border-radius: 100%;
+}
+
+.planet-mars.planet-is-active {
+  border: 4px dotted #f95c3d;
+  border-radius: 100%;
+}
+
+.planet-jupiter.planet-is-active {
+  border: 4px dotted #fcd042;
+  border-radius: 100%;
+}
+
+.planet-saturn.planet-is-active {
+  border: 4px dotted #fbaa5b;
+  padding: 25px;
+  border-radius: 100%;
+}
+
+.planet-uranus.planet-is-active {
+  border: 4px dotted #5ac3ff;
+  padding: 25px;
+  border-radius: 100%;
+}
+
+.planet-neptune.planet-is-active {
+  border: 4px dotted #6487ff;
+  border-radius: 100%;
+}
+
+.planet-pluto.planet-is-active {
+  border: 4px dotted #c39b69;
+  border-radius: 100%;
 }
