@@ -35,6 +35,7 @@ const LandingPage = () => {
           <h1> Space Voyager </h1>
 
           <p> Explore the space at fingertips now </p>
+         
         </div>
       </div>
       <Particles
@@ -143,6 +144,12 @@ const LandingPage = () => {
         <div data-testid="footer" className="end">
           <h2 data-testid="footerText">
             {" "}
+            <div className="github-button">
+            <a className="github" href="https://github.com/space-voyager-21/space-voyager" target="_blank">
+              <img src="../images/github-img.png" />
+
+              </a>
+            </div>
             Made with 💗 in React by{" "}
             <a href="https://mohittk.github.io"> Mohit </a>
           </h2>
