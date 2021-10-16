@@ -1,12 +1,8 @@
 .planet {
-  transition: all 0.3s;
   width: 100%;
   height: auto;
-  border: 4px dotted transparent;
-  border-radius: 100%;
-  padding: 10px;
-  cursor: pointer;
-  animation: rotation infinite 15s linear;
+  transition: all 0.3s ease-in-out;
+
 }
 .planet-mercury:hover {
   width: 110%;
@@ -41,12 +37,14 @@
 .planet-saturn:hover {
   width: 110%;
   border: 4px dotted #fbaa5b;
+  padding: 30px;
   border-radius: 100%;
 }
 
 .planet-uranus:hover {
   width: 110%;
   border: 4px dotted #5ac3ff;
+  padding: 30px;
   border-radius: 100%;
 }
 
@@ -62,17 +60,28 @@
   border-radius: 100%;
 }
 
-button {
+.planet-button {
   background: none;
   outline: none;
-  border: none;
-  max-width: 130px;
+  border: 4px dotted transparent;
+  max-width: 150px;
   height: 150px;
+  transition: all 0.3s;
+  animation: rotation infinite 15s linear;
+  padding: 15px;
+  cursor: pointer;
 }
-
+.planet-button:hover {
+  border: 4px dotted #f95c3d;
+  border-radius: 100%;
+}
+.planet-button:hover .planet {
+  transform : scale(1.1);
+}
 .planets {
   max-width: 85vw;
   margin: 0 auto;
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   gap: 20px;
