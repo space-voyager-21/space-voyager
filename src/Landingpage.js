@@ -35,6 +35,7 @@ const LandingPage = () => {
           <h1> Space Voyager </h1>
 
           <p> Explore the space at fingertips now </p>
+         
         </div>
       </div>
       <Particles
@@ -143,10 +144,12 @@ const LandingPage = () => {
         <div data-testid="footer" className="end">
           <h2 data-testid="footerText">
             {" "}
+
          
             <a href="https://github.com/space-voyager-21/space-voyager/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=space-voyager-21/space-voyager" />
 </a>
+
           </h2>
         </div>
       </Router>
