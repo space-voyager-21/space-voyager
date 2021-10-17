@@ -298,7 +298,7 @@ function App() {
       {/* <div data-testid="footer" className="end">
         <h2 data-testid="footerText">
           {" "}
-          Made with 💗 in React by{" "}
+          Made with 💗 inhj React by{" "}
           <a href="https://mohittk.github.io"> Mohit </a>
         </h2>
       </div> */}

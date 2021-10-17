@@ -143,8 +143,10 @@ const LandingPage = () => {
         <div data-testid="footer" className="end">
           <h2 data-testid="footerText">
             {" "}
-            Made with 💗 in React by{" "}
-            <a href="https://mohittk.github.io"> Mohit </a>
+         
+            <a href="https://github.com/space-voyager-21/space-voyager/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=space-voyager-21/space-voyager" />
+</a>
           </h2>
         </div>
       </Router>
