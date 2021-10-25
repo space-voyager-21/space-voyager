@@ -18,7 +18,7 @@ Hacktoberfest is an annual month-long celebration of open source organised every
 
 ## 💻Tech Stack
 <h4> <i> This project is under construction. </i> </h4>
-<h3>Project Link: <code><a href="https://space-voyager.vercel.app"> https://space-voyager.vercel.app </a> </code> </h3>
+<h3>Project Link: <code><a href="https://space-voyager.netlify.app"> https://space-voyager.netlify.app </a> </code> </h3>
 <h3> <code> <a href="https://vercel.com/space-v/space-voyager/A6vXUA9bdQ5AZGFDAQLt2YEYVM1v"> Build logs </a> </code> </h3>
  
  
