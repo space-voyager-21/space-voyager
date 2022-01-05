@@ -8,7 +8,8 @@ import LoadTime from "./components/LoadTimePage";
 import axiosInstance from "./axios";
 import ErrorComponent from "./components/Error";
 import Constants from "./components/Constant";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Particles from "react-particles-js";
 import IssMap from "./components/iss-map/IssMap";
 
@@ -90,7 +91,7 @@ function App() {
           <p> Explore the space at fingertips </p>
         </div>
       </div> */}
-      <Switch>
+      <Routes>
         <Route path="/planets/" exact>
           <div data-testid="searchkabox" className="searchkabox">
             <form onSubmit={fetchData}>
@@ -311,7 +312,7 @@ function App() {
           {error === false && load && querystatus === false && <LoadTime />}
           {/* <Link to="/iss-location" className="map-button" >View ISS Location</Link> */}
         </Route>
-      </Switch>
+      </Routes>
       {/* <div data-testid="footer" className="end">
         <h2 data-testid="footerText">
           {" "}

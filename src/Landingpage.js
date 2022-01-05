@@ -1,6 +1,7 @@
 import React from "react";
 import img1 from "./components/img1.png";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import {Routes, Route} from "react-router-dom"
 import Particles from "react-particles-js";
 import App from "./App";
 import "./components/index.css";
@@ -135,11 +136,13 @@ const LandingPage = () => {
           </Link>
           </Tilt>
         </div>
-        <Route exact path="/" component={WelcomePage} />
-        <Route exact path="/planets" component={App} />
-        <Route exact path="/iss" component={IssMap} />
-        <Route exact path="/satellite" component={Satellite} />
-        <Route exact path="/apod" component={Apod} />
+        <Routes>
+        <Route exact path="/" element={<WelcomePage />} />
+        <Route exact path="/planets" element={<App />} />
+        <Route exact path="/iss" element={<IssMap />} />
+        <Route exact path="/satellite" element={<Satellite />} />
+        <Route exact path="/apod" element={<Apod />} />
+        </Routes>
 
         <div data-testid="footer" className="end">
           <h2 data-testid="footerText">
