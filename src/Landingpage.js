@@ -11,8 +11,7 @@ import WelcomePage from "./components/WelcomePage";
 import Satellite from "./components/satellite/Satellite";
 import Apod from "./components/apod/Apod";
 import Tilt from "react-parallax-tilt";
-
-
+import Try from "./components/Try";
 const scrollToBottom = () => {
   window.scrollTo({
     top: document.documentElement.scrollHeight,
@@ -35,8 +34,22 @@ const LandingPage = () => {
         <div data-testid="main_heading" className="text">
           <h1> Space Voyager </h1>
 
-          <p> Explore the space at fingertips now </p>
-         
+          {/* <p> </p> */}
+          <Try 
+          // heading={'Things I want to type:'}
+          dataText={["Explore the space at fingertips now ","Explore the space at fingertips now","Explore the space at fingertips now"]} 
+          />
+          {/* <span
+            className="typing"
+            style={{
+              color: "white",
+              fontFamily: '"Secular One", sans-serif',
+
+              fontStyle: "normal",
+            }}
+          >
+            Welcome to the Space Exploration World !
+          </span> */}
         </div>
       </div>
       <Particles
@@ -93,47 +106,51 @@ const LandingPage = () => {
       <Router>
         <div className="cardblock">
           <Tilt>
-          <Link className="card__category" to="/" onClick={scrollToBottom}>
-            <img src="../images/home.png" id="navimg" alt="mkdv" />
+            <Link className="card__category" to="/" onClick={scrollToBottom}>
+              <img src="../images/home.png" id="navimg" alt="mkdv" />
 
-            <span className="page1">Home</span>
-          </Link>
-          </Tilt>
-
-<Tilt>
-          <Link
-            className="card__category"
-            to="/planets"
-            onClick={scrollToBottom}
-          >
-            <img src="../images/planetexp.jpg" alt="mkdv" />
-            <span className="page1"> Explore Planets </span>
-          </Link>
-          </Tilt>
-          
-          <Tilt>
-          <Link className="card__category" to="/iss" onClick={scrollToBottom}>
-            <img src="../images/iss.jpg" alt="mkdv" />
-            <span className="page2"> ISS Live Location </span>
-          </Link>
+              <span className="page1">Home</span>
+            </Link>
           </Tilt>
 
           <Tilt>
-          <Link
-            className="card__category"
-            to="/satellite"
-            onClick={scrollToBottom}
-          >
-            <img src="../images/satellite.jpg" alt="mkdv" />
-            <span class="page2"> Satellites </span>
-          </Link>
+            <Link
+              className="card__category"
+              to="/planets"
+              onClick={scrollToBottom}
+            >
+              <img src="../images/planetexp.jpg" alt="mkdv" />
+              <span className="page1"> Explore Planets </span>
+            </Link>
           </Tilt>
 
           <Tilt>
-          <Link className="card__category" to="/apod" onClick={scrollToBottom}>
-            <img src="../images/astronomypic.jpg" alt="mkdv" />
-            <span class="page2"> Apod </span>
-          </Link>
+            <Link className="card__category" to="/iss" onClick={scrollToBottom}>
+              <img src="../images/iss.jpg" alt="mkdv" />
+              <span className="page2"> ISS Live Location </span>
+            </Link>
+          </Tilt>
+
+          <Tilt>
+            <Link
+              className="card__category"
+              to="/satellite"
+              onClick={scrollToBottom}
+            >
+              <img src="../images/satellite.jpg" alt="mkdv" />
+              <span class="page2"> Satellites </span>
+            </Link>
+          </Tilt>
+
+          <Tilt>
+            <Link
+              className="card__category"
+              to="/apod"
+              onClick={scrollToBottom}
+            >
+              <img src="../images/astronomypic.jpg" alt="mkdv" />
+              <span class="page2"> Apod </span>
+            </Link>
           </Tilt>
         </div>
         <Routes>
@@ -148,9 +165,12 @@ const LandingPage = () => {
           <h2 data-testid="footerText">
             {" "}
             <div className="github-button">
-            <a className="github" href="https://github.com/space-voyager-21/space-voyager" target="_blank">
-              <img src="../images/github-img.png" />
-
+              <a
+                className="github"
+                href="https://github.com/space-voyager-21/space-voyager"
+                target="_blank"
+              >
+                <img src="../images/github-img.png" />
               </a>
             </div>
             Made with 💗 in React by{" "}
